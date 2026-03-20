@@ -1,0 +1,53 @@
+﻿participant_no;kalaallisut_native_language;country_of_residence;variant_east;variant_west;variant_north;everyday_kalaallisut;everyday_danish;everyday_english;everyday_other;age;gender;dyslexic;how_often_kalaallisut;favorite_language_kalaallisut;favorite_language_danish;favorite_language_english;favorite_language_other;wearing_glasses;wearing_contacts;normal_sight;notes
+1;yes;greenland;1;0;0;1;0;0;0;17;female;no;every day;1;0;1;0;0;0;yes;na
+2;yes;greenland;1;1;0;1;1;0;0;17;male;no;every day;1;1;1;0;0;0;na;na
+3;yes;greenland;0;1;0;1;1;0;0;16;female;no;rarely;0;1;1;0;0;0;na;na
+4;yes;greenland;0;1;0;1;0;0;0;17;female;no;every day;1;0;0;0;0;0;na;na
+5;yes;greenland;1;0;0;1;0;0;0;17;female;no;sometimes;0;1;0;0;0;0;na;na
+6;yes;greenland;1;0;0;1;0;0;0;21;female;no;every day;1;0;0;0;0;0;na;na
+7;yes;greenland;0;1;0;1;0;0;0;19;male;no;every day;1;0;0;0;0;0;na;na
+8;yes;greenland;0;1;0;1;1;0;0;18;female;no;every day;0;1;0;0;0;0;na;både ja og nej til grønlandsk som modersmål - da jeg skulle starte i folkeskole gjorde min mor og lærer og andre alt for at jeg skulle lære grønlandsk
+9;yes;greenland;0;1;0;1;0;0;0;17;female;no;every day;1;0;0;0;0;0;na;na
+10;yes;greenland;0;1;0;1;0;0;0;20;female;no;rarely;0;1;1;0;0;1;yes;normalt syn med linser
+11;yes;greenland;0;1;0;1;0;0;0;29;female;don't know;every day;1;1;0;0;1;0;yes;normalt syn med briller
+12;yes;greenland;0;1;0;1;0;0;0;29;female;no;every day;1;1;0;0;0;0;no;bruger normalt linser men har dem ikke i. minus 1.75 på venstre. men det går fint med at læse på skærmen
+13;yes;greenland;0;1;0;1;0;0;0;25;female;no;every day;1;0;0;0;0;0;almost;lidt minus på det ene og plus på det andet (måske 0.5) men ikke nok til at få briller eller linser
+14;yes;greenland;0;1;0;1;1;0;0;22;female;no;every day;1;1;0;0;0;1;yes;normalt syn med linser
+15;yes;greenland;0;1;0;1;0;1;0;26;female;no;sometimes;0;0;1;0;0;0;yes;na
+16;yes;greenland;0;1;0;1;0;1;0;23;female;no;sometimes;1;0;0;0;1;0;yes;normalt syn med briller
+17;yes;greenland;0;1;0;1;1;1;0;32;female;no;every day;1;1;1;0;0;0;no;prisma + bygningsfejl
+18;yes;greenland;0;1;0;1;1;0;0;44;male;no;every day;0;1;0;0;1;0;yes;normalt syn med briller
+19;yes;greenland;0;1;0;1;1;1;0;31;female;no;every day;1;1;1;0;0;1;yes;normalt syn med linser
+20;yes;greenland;0;1;0;1;1;0;0;28;male;no;every day;0;1;0;0;0;0;yes;na
+21;yes;greenland;0;1;0;1;0;0;0;17;female;no;every day;1;0;1;0;0;0;yes;na
+22;yes;greenland;0;1;0;1;1;0;0;17;male;no;rarely;1;0;0;0;0;0;no;har briller men havde dem ikke på
+23;yes;greenland;0;1;0;0;1;0;0;17;male;no;rarely;0;1;1;0;0;0;yes;na
+24;yes;greenland;1;0;0;1;0;0;0;32;female;no;every day;1;0;0;0;0;0;yes;na
+25;yes;greenland;0;1;1;1;1;1;0;18;female;no;every day;0;1;1;0;0;0;no;har normalt briller men de er ikke så stærke
+26;yes;greenland;0;1;0;1;0;0;0;18;female;no;every day;1;1;0;0;0;1;yes;normalt syn med linser
+27;yes;greenland;0;1;0;1;1;1;0;18;female;no;rarely;1;1;1;0;0;0;yes;na
+28;yes;greenland;0;1;0;1;1;0;0;28;female;no;sometimes;0;1;1;0;0;0;almost;har briller men bruger dem ikke
+29;yes;greenland;1;0;0;1;1;0;0;21;female;no;rarely;0;1;0;0;1;0;yes;normalt syn med briller
+30;yes;greenland;0;1;0;1;1;1;0;20;female;no;every day;1;1;1;0;0;0;no;har briller men havde dem ikke på. -1.25 i styrke
+31;yes;greenland;0;1;0;1;0;0;0;19;female;no;every day;1;0;0;0;1;0;yes;normalt syn med briller
+32;yes;greenland;0;1;0;1;0;0;0;16;female;no;sometimes;0;0;1;0;0;1;yes;normalt syn med linser
+33;yes;greenland;0;1;0;0;1;0;0;18;male;no;rarely;0;1;1;0;0;0;yes;na
+34;yes;greenland;0;1;0;1;1;0;0;17;male;no;every day;1;1;0;0;0;0;yes;na
+35;yes;greenland;1;0;0;0;0;1;0;18;other;no;sometimes;0;0;1;0;0;0;no;har briller men de er blevet væk. Cirka -1 i styrke
+36;yes;greenland;0;1;0;1;1;0;0;26;female;no;every day;0;1;1;0;0;1;no;lidt bygningsfejl på højre, generer ikke
+37;yes;greenland;0;1;0;1;1;0;0;17;female;no;every day;0;1;0;0;0;0;no;har briller men har dem ikke på. Bygningsfejl.
+38;yes;greenland;0;1;0;1;1;0;0;24;female;no;every day;1;1;0;0;0;0;almost;syn ikke helt normalt på venstre øje men har ikke fået det testet
+39;yes;greenland;0;1;0;1;0;0;0;17;female;no;every day;1;0;1;0;0;0;yes;na
+40;yes;greenland;0;1;0;1;0;0;0;22;female;no;every day;1;0;0;0;0;0;yes;na
+41;yes;greenland;0;1;0;1;0;0;0;63;female;no;every day;1;1;0;0;0;0;no;har normalt briller men har dem ikke på
+42;yes;denmark;0;1;0;0;1;0;0;65;female;no;every day;0;1;0;0;1;0;yes;normalt syn med briller
+43;yes;denmark;0;1;0;1;1;0;0;40;female;no;every day;1;0;0;0;1;0;yes;normalt syn med briller
+44;yes;denmark;0;1;0;1;0;0;0;33;female;no;every day;1;0;0;0;0;1;yes;normalt syn med linser
+45;yes;greenland;0;0;1;1;0;0;0;59;male;no;sometimes;1;1;0;0;1;0;yes;normalt syn med briller
+46;yes;greenland;0;1;0;1;0;0;0;42;female;no;sometimes;1;0;0;0;0;0;yes;na
+47;yes;greenland;0;1;0;1;1;0;0;39;female;no;every day;0;1;0;0;1;0;yes;normalt syn med briller
+48;yes;greenland;0;1;0;1;1;1;0;59;female;no;every day;1;1;0;0;0;0;almost;har læsebriller men har dem ikke på fordi skærmen er langt væk
+49;yes;denmark;0;1;0;1;0;1;0;25;female;no;sometimes;1;0;1;1;0;1;no;has -1 with contacts
+50;yes;denmark;0;1;0;1;1;0;0;23;male;no;sometimes;1;1;1;0;0;0;yes;na
+51;yes;denmark;1;1;0;1;1;0;0;27;male;no;every day;0;1;1;0;0;0;yes;na
+52;yes;denmark;0;1;0;0;1;0;0;67;female;no;every day;0;1;0;0;0;0;almost;har læsebriller men har dem ikke på fordi skærmen er langt væk

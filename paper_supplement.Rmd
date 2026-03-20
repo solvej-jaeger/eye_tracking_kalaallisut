@@ -1,0 +1,240 @@
+---
+title: "Supplementary materials"
+output: bookdown::word_document2 
+bibliography: bibliography.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+source("R/01_load_packages.R")
+source("R/02_read_data.R")
+source("R/03_extra_data_cleaning.R")
+source("R/04_skewness_and_log_transformation.R")
+source("R/05_suffix_models.R")
+source("R/06_fixation_density_and_word_length.R")
+source("R/07_fix_times_across_word_regions.R")
+source("R/08_fix_times_across_baseline_words.R")
+source("R/09_skipping_rates_suffixes_and_words.R")
+source("R/10_regression_rates.R")
+
+```
+
+## Relationship between fixation density and word length for fast vs. slow readers
+For this plot, the participants were divided into two equally sized groups based on their reading speed.
+
+```{r fixation density and word length - slow and fast readers, echo=FALSE, warning=FALSE, message=FALSE}
+
+# first divide participants into two groups
+df_reading_times <- df_affix_cleaned %>% 
+  group_by(participant_id) %>%
+  summarise(mean_rt_per_char_trials = mean(rt_per_char_trial)) %>%
+  mutate(
+    speed_group = ifelse(
+      ntile(mean_rt_per_char_trials, 2) == 1,
+      "fastest",
+      "slowest"
+    )
+  )
+
+# add speed group to fixations_all_words
+fixations_all_words <- fixations_all_words %>%
+  left_join(df_reading_times %>% select(participant_id, speed_group), by = "participant_id")
+# and to df_affix_cleaned (for later use)
+df_affix_cleaned <- df_affix_cleaned %>%
+  left_join(df_reading_times %>% select(participant_id, speed_group), by = "participant_id")
+
+# visualize
+z <- fixations_all_words %>%
+  group_by(speed_group, current_word_length) %>%
+  summarise(
+    mean_fix_density = mean(fixations_per_char),
+    n_words = n(),
+    .groups = "drop"
+  )
+
+fixation_density_plot_by_speed <- ggplot(z, aes(x = current_word_length, y = mean_fix_density)) +
+  geom_smooth(method = "loess", se = TRUE, color = "blue") +
+  geom_point(aes(size = n_words)) +
+  facet_wrap(~ speed_group) +
+  labs(
+    title = "Fixation density by word length for the fastest and slowest readers",
+    x = "word length (in characters)",
+    y = "fixations per character"
+  ) +
+  theme_bw()
+
+fixation_density_plot_by_speed
+```
+
+## Quadratic model to determine turning point
+
+```{r fit model and calculate turning point}
+model_fix_per_char_quadratic <- lmer(   
+  fixations_per_char ~ current_word_length + I(current_word_length^2) + (1|participant_id),   
+  data = fixations_per_char_words)  
+
+# calculate turning point 
+coefs <- fixef(model_fix_per_char_quadratic) 
+a <- coefs["I(current_word_length^2)"] 
+b <- coefs["current_word_length"] 
+turning_point <- -b / (2 * a) 
+```
+
+The turning point is when word length is 9.2 letters.
+
+## Model for fixation density on the four word regions and the baseline words
+
+```{r fixation density on the four word regions and the baseline words, echo=FALSE, warning=FALSE}
+## add columns containing inflection frequency (both absolute and log10-transformed)
+
+# add inflection column
+fix_report_target_word_and_baseline <- 
+  fix_report_target_word_and_baseline %>%
+  mutate(
+    inflection = pmap_chr(
+      list(sentence_2_kal, sentence_2_ids, inflection_ids),
+      function(sent, sent_ids_raw, infl_ids) {
+        
+        # 1. Turn sentence_2_ids into a vector
+        sent_ids <- str_split(sent_ids_raw, ",\\s*")[[1]]
+        
+        # 2. Match inflection IDs to sentence IDs
+        positions <- match(infl_ids, sent_ids)
+        
+        # 3. Split sentence into characters
+        chars <- str_split(sent, "")[[1]]
+        
+        # 4. Extract characters
+        paste0(chars[positions], collapse = "")
+      }
+    )
+  )
+
+# make df containing inflection frequency
+df_inflection_frequency <- fix_report_target_word_and_baseline %>%
+  group_by(inflection) %>%
+  summarise("inflection_frequency_absolute" = NA)
+
+df_inflection_frequency <- df_inflection_frequency %>% 
+  mutate(inflection_frequency_absolute = recode(
+    inflection,
+    "aangat" = 9454,
+    "aat" = 606457,
+    "ami" = 250904,
+    "amiuk" = 18667,
+    "aq" = 699499,
+    "at" = 1473379,
+    "gaa" = 79801,
+    "gami" = 19840,
+    "gamik" = 13697,
+    "li" = 286947,
+    "lluni" = 165895,
+    "llutik" = 93348,
+    "luni" = 346093,
+    "lutik" = 196583,
+    "mat" = 145798,
+    "mata" = 51333,
+    "mmat" = 71007,
+    "mmata" = 28507,
+    "paa" = 104292,
+    "paat" = 85273,
+    "pai" = 39738,
+    "poq" = 673407,
+    "pput" = 291821,
+    "put" = 628027,
+    "soq" = 349321,
+    "sut" = 550045,
+    "vaa" = 48810,
+    "vaat" = 44830,
+    "vai" = 21200,
+    "voq" = 289743,
+    "vunga" = 12537,
+    .default = NA_real_
+  ))
+
+# note: for the inflection frequencies, we used the "words ends with" search function in the corpus
+# so some of the hits may not actually be the same inflection but the ending of something else
+# that just happens to be spelled the same
+
+# merge with fix_report
+fix_report_target_word_and_baseline <- 
+  fix_report_target_word_and_baseline %>%
+  left_join(df_inflection_frequency, by = "inflection")
+
+# add column containing log10-transformed inflection frequency
+fix_report_target_word_and_baseline <- 
+  fix_report_target_word_and_baseline %>%
+  mutate(
+    inflection_frequency_log = log10(inflection_frequency_absolute)
+  )
+
+## create column region_frequency_log
+fix_report_target_word_and_baseline <- 
+  fix_report_target_word_and_baseline %>%
+  mutate(
+    region_frequency_log = case_when(
+      fixation_position == "root" ~ root_frequency_log,
+      fixation_position == "affix" ~ affix_frequency_log,
+      fixation_position == "fill" ~ fill_affix_frequency_log,
+      fixation_position == "inflection" ~ inflection_frequency_log,
+      fixation_position == "word" ~ baseline_word_frequency_log,
+      TRUE ~ NA_real_
+    )
+  )
+
+## calculate fixation density on each region
+fix_density_df <- 
+  fix_report_target_word_and_baseline %>%
+  group_by(trial_key, participant_id, fixation_position) %>%
+  summarise(
+    n_fixations = n(),
+    region_length = first(region_length),
+    region_frequency_log = first(region_frequency_log),
+    fixation_density = n_fixations / region_length,
+    .groups = "drop"
+  )
+
+## fit a lmer model
+
+fix_density_df$fixation_position <- 
+  factor(fix_density_df$fixation_position,
+         levels = c("affix", "root", "fill", "inflection", "word"))
+
+model_fix_dens <- lmer(
+  fixation_density ~ fixation_position + 
+    region_frequency_log + 
+    region_length + 
+    (1 | participant_id),
+  data = fix_density_df
+)
+
+## make a table
+
+model_fix_dens_tbl <- tbl_regression(
+  model_fix_dens,
+  exponentiate = FALSE,
+  tidy_fun = function(x, ...) {
+    broom.mixed::tidy(x, effects = "fixed", conf.int = FALSE)
+  }
+)
+
+model_fix_dens_tbl <- model_fix_dens_tbl %>%
+  modify_header(
+    estimate ~ "β", 
+    std.error ~ "SE",
+    statistic ~ "z",
+    p.value ~ "p"
+  )
+
+# create huxtable
+model_fix_dens_ht <- model_fix_dens_tbl %>%
+  as_tibble() %>%
+  as_hux()
+
+model_fix_dens_ht
+
+```
+
+
