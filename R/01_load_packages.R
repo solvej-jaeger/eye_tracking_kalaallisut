@@ -1,19 +1,24 @@
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-library(ggpubr)
-library(data.table)
-library(readr)
-library(lmerTest)
-library(stringr)
-library(forcats)
-library(purrr)
-library(ggrepel)
-library(moments)
-library(trackdown)
-library(broom.helpers)
-library(gt)
-library(gtsummary)
-library(kableExtra)
-library(knitr)
-library(huxtable)
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(
+  ggplot2,
+  dplyr,
+  tidyr,
+  ggpubr,
+  data.table,
+  readr,
+  lmerTest,
+  stringr,
+  forcats,
+  purrr,
+  ggrepel,
+  moments,
+  trackdown,
+  broom.helpers,
+  gt,
+  gtsummary,
+  kableExtra,
+  knitr,
+  huxtable
+)
+

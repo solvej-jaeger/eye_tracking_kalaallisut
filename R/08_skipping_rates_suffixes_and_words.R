@@ -3,16 +3,16 @@
 # first define columns to exclude from renaming
 exclude_cols <- c("trial_key", "participant_id")
 
-# rename df_root_cleaned: add _root suffix
-df_root_renamed <- df_root_cleaned
+# rename df_root: add _root suffix
+df_root_renamed <- df_root
 names(df_root_renamed) <- ifelse(
   names(df_root_renamed) %in% exclude_cols,
   names(df_root_renamed),
   paste0(names(df_root_renamed), "_root")
 )
 
-# rename df_affix_cleaned: add _target suffix
-df_affix_renamed <- df_affix_cleaned
+# rename df_affix: add _target suffix
+df_affix_renamed <- df_affix
 names(df_affix_renamed) <- ifelse(
   names(df_affix_renamed) %in% exclude_cols,
   names(df_affix_renamed),
@@ -27,16 +27,16 @@ names(df_baseline_renamed) <- ifelse(
   paste0(names(df_baseline_renamed), "_word")
 )
 
-# rename df_fill_cleaned: add _fill suffix
-df_fill_renamed <- df_fill_cleaned
+# rename df_fill: add _fill suffix
+df_fill_renamed <- df_fill
 names(df_fill_renamed) <- ifelse(
   names(df_fill_renamed) %in% exclude_cols,
   names(df_fill_renamed),
   paste0(names(df_fill_renamed), "_fill")
 )
 
-# rename df_inflection_cleaned: add _inflection suffix
-df_inflection_renamed <- df_inflection_cleaned
+# rename df_inflection: add _inflection suffix
+df_inflection_renamed <- df_inflection
 names(df_inflection_renamed) <- ifelse(
   names(df_inflection_renamed) %in% exclude_cols,
   names(df_inflection_renamed),

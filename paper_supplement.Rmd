@@ -10,14 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 source("R/01_load_packages.R")
 source("R/02_read_data.R")
-source("R/03_extra_data_cleaning.R")
-source("R/04_skewness_and_log_transformation.R")
-source("R/05_suffix_models.R")
-source("R/06_fixation_density_and_word_length.R")
-source("R/07_fix_times_across_word_regions.R")
-source("R/08_fix_times_across_baseline_words.R")
-source("R/09_skipping_rates_suffixes_and_words.R")
-source("R/10_regression_rates.R")
+source("R/03_skewness_and_log_transformation.R")
+source("R/04_suffix_models.R")
+source("R/05_fixation_density_and_word_length.R")
+source("R/06_fix_times_across_word_regions.R")
+source("R/07_fix_times_across_baseline_words.R")
+source("R/08_skipping_rates_suffixes_and_words.R")
+source("R/09_regression_rates.R")
 
 ```
 
@@ -27,7 +26,7 @@ For this plot, the participants were divided into two equally sized groups based
 ```{r fixation density and word length - slow and fast readers, echo=FALSE, warning=FALSE, message=FALSE}
 
 # first divide participants into two groups
-df_reading_times <- df_affix_cleaned %>% 
+df_reading_times <- df_affix %>% 
   group_by(participant_id) %>%
   summarise(mean_rt_per_char_trials = mean(rt_per_char_trial)) %>%
   mutate(
@@ -41,8 +40,8 @@ df_reading_times <- df_affix_cleaned %>%
 # add speed group to fixations_all_words
 fixations_all_words <- fixations_all_words %>%
   left_join(df_reading_times %>% select(participant_id, speed_group), by = "participant_id")
-# and to df_affix_cleaned (for later use)
-df_affix_cleaned <- df_affix_cleaned %>%
+# and to df_affix (for later use)
+df_affix <- df_affix %>%
   left_join(df_reading_times %>% select(participant_id, speed_group), by = "participant_id")
 
 # visualize

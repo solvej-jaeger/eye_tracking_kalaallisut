@@ -129,7 +129,7 @@ fixations_within_regions_grouped4 <- fix_report_target_word_and_baseline %>%
   group_by(fixation_position, fix_position_normalized_third) %>%
   summarise(
     mean_duration =
-      sum(CURRENT_FIX_DURATION) / length(df_affix_cleaned$trial_key),
+      sum(CURRENT_FIX_DURATION) / length(df_affix$trial_key),
     .groups = "drop"
   ) %>%
   left_join(region_lengths, by = "fixation_position") %>%
