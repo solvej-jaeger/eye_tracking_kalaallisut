@@ -6,7 +6,7 @@ This repository contains code and data from the Kalaallisut eye-tracking reading
 
 - `R/` — Scripts for data processing and analyses.
 - `data/` — The cleaned Kalaallisut eye-tracking reading data (licensed separately, see below).
-- `raw_data/` - The raw data (licensed separately, see below)
+- `raw_data/` — The raw data (licensed separately, see below)
 - `items/` — The experimental items.
 
 ## License
