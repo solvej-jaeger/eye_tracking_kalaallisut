@@ -77,7 +77,7 @@ In the experiment, adult native speakers of Kalaallisut read sentences on a scre
 
 Besides testing the specific hypotheses regarding grammatical and lexical suffixes, the experiment design also allowed for investigating more general fixation patterns on multi-morphemic words.
 
-Data and analysis scripts are available here: <https://github.com/solvej-jaeger/eye_tracking_kalaallisut>.
+Data and analysis scripts are available here: <https://anonymous.4open.science/r/eye_tracking_kalaallisut-450F>.
 
 ## Method
 
@@ -359,7 +359,7 @@ table5_ht
 
 Overall, 6.97% of all trials were excluded in this data filtering process, leaving 7,225 trials for the final analysis[^6].
 
-[^6]: The raw data and preprocessing scripts are available here: <https://github.com/solvej-jaeger/eye_tracking_kalaallisut>.
+[^6]: The raw data and preprocessing scripts are available here: <https://anonymous.4open.science/r/eye_tracking_kalaallisut-450F>.
 
 Statistical analyses were conducted using linear mixed-effects models implemented in the lme4 package [@batesFittingLinearMixedEffects2015] in R, version 4.4.2 [@rcoreteamLanguageEnvironmentStatistical2021].
 
