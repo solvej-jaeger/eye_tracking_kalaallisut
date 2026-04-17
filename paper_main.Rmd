@@ -23,23 +23,23 @@ source("R/09_regression_rates.R")
 
 # Abstract
 
-This eye-tracking study investigates the processing of multi-morphemic words during reading in Kalaallisut (Greenlandic), a so-called polysynthetic language characterized by extreme morphological richness. The study has two main aims. First, it tests the hypothesis that some Kalaallisut derivational suffixes are lexical rather than grammatical, and that this distinction is reflected in the allocation of visual attention during reading. Second, it provides an exploratory account of overall fixation patterns on multi-morphemic words in Kalaallisut reading. The hypothesis-driven analyses show that lexical suffixes elicited longer first fixation durations and gaze durations than grammatical suffixes, supporting the proposed lexical–grammatical distinction and challenging the widespread assumption that affixes form a uniformly grammatical category. In addition, suffix frequency and length significantly influenced reading measures in ways that parallel well-established word-level effects in other languages, suggesting that suffixes function as processing units in Kalaallisut reading. Turning to the exploratory analyses, long, multi-morphemic words elicited a high density of fixations compared to shorter words, indicating substantial processing demands. Within these multi-morphemic words, visual attention was asymmetrically distributed, with fixations most highly concentrated near the root at the beginning of the word.
+This eye-tracking study investigates the processing of multi-morphemic words during reading in Kalaallisut (Greenlandic), a so-called polysynthetic language characterized by extreme morphological richness. The study has two main aims. First, it tests the hypothesis that some Kalaallisut derivational suffixes are lexical rather than grammatical, and that this distinction is reflected in the allocation of visual attention during reading. Second, it provides an exploratory account of overall fixation patterns on multi-morphemic words in Kalaallisut reading. The hypothesis-driven analyses show that lexical suffixes elicited longer first fixation durations and gaze durations than grammatical suffixes, even when suffix frequency and length were controlled for, supporting the proposed lexical–grammatical distinction and challenging the widespread assumption that affixes form a uniformly grammatical category. In addition, suffix frequency and length significantly influenced reading measures in ways that parallel well-established word-level effects in other languages, suggesting that suffixes function as processing units in Kalaallisut reading. Turning to the exploratory analyses, long, multi-morphemic words elicited a high density of fixations compared to shorter words, indicating substantial processing demands. Within these multi-morphemic words, visual attention was asymmetrically distributed, with fixations most highly concentrated near the root at the beginning of the word.
 
 # Introduction
 
 Eye tracking during reading gives us access to fine-grained data on language processing. Decades of research in this field have produced a number of well-established insights, for example that more frequent and more predictable words are processed faster than their less frequent or less predictable counterparts [@ehrlich1981; @ellisFrequencyEffectsLanguage2002; @lowderLexicalPredictabilityNatural2018], and that shorter words are read more quickly than longer ones [@justTheoryReadingEye1980; @bertramLengthComplexWord2003]. However, most eye-tracking research has concentrated on Indo-European languages, particularly English [see @siegelmanExpandingHorizonsCrosslinguistic2022], leaving languages with more complex morphological structures under-studied. This raises the possibility that many widely accepted conclusions about word processing and reading may not generalize across languages with different morphological patterns. Broadening the empirical base of eye-tracking research is essential for assessing the universality of current models.
 
-The present study contributes to this goal by examining reading in Kalaallisut (Greenlandic), a language characterized by extreme morphological richness. Spoken by approximately 50,000 people and holding official status in Greenland, Kalaallisut features an exceptionally elaborate morphological system, with an estimated 300-400 productive suffixes [@fortescueAffixOrderingWest1980], and is often highlighted as a prototypical example of polysynthesis [@mattissenSubTypesPolysynthesis2017; @trudgillAnthropologicalSettingPolysynthesis2017]. The major word classes in Kalaallisut are verbs and nouns, both of which minimally consist of a root and an inflectional ending. Between these elements, an (in principle) unlimited number of derivational suffixes may occur [@fortescueWestGreenlandic1984; @kahnWestGreenlandicEssential2021]. Some derivational suffixes are verbalizing or nominalizing, allowing multiple base class shifts within a single word. Moreover, many derivational suffixes contribute meanings that would typically be expressed by lexical words in more analytic languages (e.g., *-tor* 'eat' or *-nerar* 'say'). As a result, individual words in Kalaallisut may contain multiple constituents, including, for example, both a predicate and an object, and it is not uncommon for an entire sentence to be expressed by a single word. An example is given in (1) [example from @fortescueWestGreenlandic1984, p. 315]:
+The present study contributes to this goal by examining reading in Kalaallisut (Greenlandic), a language characterized by extreme morphological richness. Spoken by approximately 50,000 people and holding official status in Greenland, Kalaallisut features an exceptionally elaborate morphological system, with an estimated 300-400 productive suffixes [@fortescueAffixOrderingWest1980], and is often highlighted as a prototypical example of polysynthesis [@mattissenSubTypesPolysynthesis2017; @trudgillAnthropologicalSettingPolysynthesis2017]. The major word classes in Kalaallisut are verbs and nouns, both of which minimally consist of a root and an inflectional ending. Between these elements, an (in principle) unlimited number of derivational suffixes may occur [@fortescueWestGreenlandic1984; @kahnWestGreenlandicEssential2021]. Some derivational suffixes are verbalizing or nominalizing, and multiple base class shifts can occur within a single word. Moreover, many derivational suffixes contribute meanings that would typically be expressed by lexical words in more analytic languages (e.g., *-tor* 'eat' and *-nerar* 'say'). As a result, individual words in Kalaallisut may contain multiple constituents, including, for example, both a predicate and an object, and it is not uncommon for an entire sentence to be expressed by a single word. An example is given in (1) [example from @fortescueWestGreenlandic1984: 315]:
 
-(1) *Annerulersinneqarsinnaasorinngikkaluarpakka*
+(1) *annerulersinneqarsinnaasorinngikkaluarpakka*
 
-    *An-neru-ler-tip-neqar-sinnaa-sori-nngit-galuar-vakka*
+    *an-neru-ler-tip-neqar-sinnaa-sori-nngit-galuar-vakka*
 
-    be.big-more-begin-cause-passive-can-think.that-not-however-DECL.1SG/3PL
+    be.big-more-begin-CAUS-PASS-can-think.that-NEG-however-DECL.1SG/3PL
 
     ‘I don’t think they can be made any bigger however’
 
-The present study investigates how multi-morphemic words are processed in Kalaallisut reading. Its primary aim is to test the hypothesis that certain Kalaallisut derivational suffixes are lexical elements, while others are grammatical, and that this distinction is reflected in the allocation of attention in language processing. In addition to this hypothesis-driven goal, the study has an exploratory component. As the first investigation to employ high-precision eye tracking in Kalaallisut reading [though see also @mathiassenEleversStavelsesMorfologiske2025], it addresses broader questions about how visual attention is distributed across morphologically complex words, and whether effects commonly observed at the word level in other languages (such as frequency effects) may be detected at the morpheme level in Kalaallisut.
+The present study investigates how multi-morphemic words are processed in Kalaallisut reading. Its primary aim is to test the hypothesis that certain Kalaallisut derivational suffixes are lexical, while others are grammatical, and that this distinction is reflected in the allocation of attention in language processing. In addition to this hypothesis-driven goal, the study has an exploratory component. As the first investigation to employ high-precision eye tracking in Kalaallisut reading [though see also @mathiassenEleversStavelsesMorfologiske2025], it addresses broader questions about how visual attention is distributed across morphologically complex words, and whether effects commonly observed at the word level in other languages (such as frequency effects) may be detected at the morpheme level in Kalaallisut.
 
 The specific hypothesis draws on typological research on lexical affixes, which has shown that affixes in a range of languages may display properties typically associated with lexical elements [e.g. @carlsonCompoundingLexicalAffixation1990; @gerdtsSalishLexicalSuffixes1996; @kazamaLexicalAffixesTungusic2011; @kinkadeOriginsSalishanLexical1998; @kurebitoLexicalAffixesChukchi2001; @mattissenSubTypesPolysynthesis2017; @mithunLexicalAffixesMorphological1997]. At the same time, the hypothesis builds on Boye and Harder [-@boyeUsageBasedTheoryGrammatical2012] and Boye [-@boyeLexicalVsGrammatical2023; -@boyeEvidentialityDiscourseProminence2024] who argue that the distinction between what is lexical and what is grammatical is a question of conventionalized patterns of attention prioritization:
 
@@ -53,7 +53,7 @@ To illustrate, see the utterance in (2):
 
 As both *grow* and *avocados* are lexical elements, they can both be interpreted as expressing the primary point of the utterance: In a conversation about what to grow, *avocados* would be the attentional foreground, but in a discussion about rising avocado prices, *grow* would be the central point. Being grammatical, the plural ending *-s* can however never be interpreted as conveying the primary point (except in metalinguistic contexts where conventions are overridden). Thus, the lexicon-grammar contrast functions as a tool for economizing with our processing resources: It helps us to determine which parts of complex messages we should allocate our attention to [@boyeAgrammatismUsagebasedTheory2023].
 
-The theory entails a set of predictions that are supported by a range of recent studies, both within language perception, language production, and agrammatism. For instance, in language production, grammatical elements were correctly predicted to be associated with longer reaction times [@langePlanningProductionGrammatical2017] and more errors under cognitive load [@ishkhanyanMeetingPointWhere2019]. In agrammatic speech, grammatical elements were correctly predicted to be omitted or substituted more frequently than lexical elements [e.g., @ishkhanyanGrammaticalLexicalPronoun2017; @nielsenProductionGrammaticalLexical2019].
+The theory entails a set of predictions that are supported by a range of recent studies, both in language perception, language production, and agrammatism. For instance, in language production, grammatical elements were correctly predicted to be associated with longer reaction times [@langePlanningProductionGrammatical2017] and more errors under cognitive load [@ishkhanyanMeetingPointWhere2019]. In agrammatic speech, grammatical elements were correctly predicted to be omitted or substituted more frequently than lexical elements [e.g., @ishkhanyanGrammaticalLexicalPronoun2017; @nielsenProductionGrammaticalLexical2019].
 
 The focus of the present study is language perception. Here, the theory predicts that lexical elements will attract more attention than grammatical elements. This prediction is supported by evidence from several different experimental paradigms. For instance, @christensenGrammarBackgroundSentence2021 found in a change-blindness reading experiment that participants were more likely to detect changes in lexical than in grammatical words, suggesting that lexical words are processed more attentively. Similarly, letter-search experiments have shown that when readers are asked to mark all instances of a target letter in a text, they miss more letters in grammatical than in lexical words [@kleinWhatSimpleLetterDetection2016]. Within the eye-tracking paradigm, there is likewise evidence that lexical words receive more attention than grammatical words in reading, as indicated by longer fixation durations and lower skipping probabilities for lexical words [e.g., @carpenterWhatYourEyes1983; @krejtzReadingFunctionContent2016]. An apparent exception was reported by @staubFunctionContentWord2024 who found no reliable differences once frequency, length, and predictability were controlled for. However, a recent reanalysis shows that this null effect may be due to a theoretically unmotivated classification: When the items in Staub's function-word group are reclassified as lexical or grammatical on the basis of the present theory, lexical elements do in fact receive longer fixations than grammatical ones (though there is no effect on skipping probability) [@jaegerTimeChangeWhyunderbedommelse-submitted].
 
@@ -73,7 +73,7 @@ Based on the theory outlined here, we would expect that Kalaallisut suffixes cla
 
 # The experiment
 
-In the experiment, adult native speakers of Kalaallisut read sentences on a screen while their eye movements were tracked. Each participant read 160 sets of three sentences, 80 of which contained a grammatical target suffix and 80 a lexical. As we describe in more detail below, the words in which the target suffixes appeared were constructed such that morphological structure and target suffix position were fixed. For the analysis, linear mixed-effects models were used to assess the effect of structural status (lexical vs. grammatical) on eye-movement measures for the suffixes. Suffix length, frequency and predictability were also included as predictors.
+In the experiment, adult native speakers of Kalaallisut read sentences on a screen while their eye movements were tracked. Each participant read 160 triplets of sentences, 80 of which contained a grammatical target suffix and 80 a lexical. As we describe in more detail below, the words in which the target suffixes appeared were constructed such that morphological structure and target suffix position were fixed. For the analysis, linear mixed-effects models were used to assess the effect of structural status (lexical vs. grammatical) on eye-movement measures for the suffixes. Suffix length, frequency and predictability were also included as predictors.
 
 Besides testing the specific hypotheses regarding grammatical and lexical suffixes, the experiment design also allowed for investigating more general fixation patterns on multi-morphemic words.
 
@@ -97,9 +97,9 @@ Movements of the right eye were recorded with an Eyelink Portable Duo eye tracke
 
 The experiment was constructed in Experiment Builder (SR Research). Sentences were displayed in Courier New, font size 19. Each letter subtended 0.38 degrees of visual angle. The background was white and the text color black.
 
-Participants were instructed to read for comprehension. A 9-point calibration procedure was performed at the start of the experiment, after every 40^th^ trial, and additionally as needed between trials. The average calibration error across participants was 0.35 degrees of visual angle (SD = 0.14).
+A 9-point calibration procedure was performed at the start of the experiment, after every 40^th^ trial, and additionally as needed between trials. The average calibration error across participants was 0.35 degrees of visual angle (SD = 0.14).
 
-Each trial consisted of three sentences presented below one another with clear spacing in between. No sentence was longer than a single line. The sentences appeared when the participant fixated a drift-check dot on the left side of the screen and simultaneously pressed space. After reading all three sentences, the participant again pressed space to proceed.
+Participants were instructed to read for comprehension. Each trial consisted of three sentences presented below one another with clear spacing in between. No sentence was longer than a single line. The sentences appeared when the participant fixated a drift-check dot on the left side of the screen and simultaneously pressed space. After reading all three sentences, the participant again pressed space to proceed.
 
 A yes/no comprehension question followed 25% of the trials. Trials appeared in fully randomized order, so participants could not predict when the next comprehension question would appear. There were 160 trials in total, and each session lasted approximately one hour (mean duration excluding calibration and breaks = 39.5 minutes, SD = 9.1). A short break was provided after every 40^th^ trial.
 
@@ -117,7 +117,7 @@ target_suffixes <- data.frame(
           "", "‘go to’", "‘use, eat’", "‘look for’ / ‘celebrate’", "‘provide with’"),
   `Grammatical suffixes` = c("", "-qqajaa", "-nikuu", "-jumaar", "-qqammer",
                                     "", "-nnngor", "-giig", "-miit", "-giiaar"),
-  `  ` = c("", "‘about to’", "‘perfect’", "‘vague future’", "‘recently’",
+  `  ` = c("", "‘about to’", "PRF", "‘vague future’", "‘recently’",
            "", "‘become’", "‘be mutually’", "‘be in/on’", "‘be mutually – several’"),
   check.names = FALSE
 )
@@ -128,7 +128,7 @@ kable(target_suffixes, align = "llll", escape = FALSE,
 
 Four suffixes in each category were verbal modifiers, meaning that they combine with verbal stems. The remaining four in each category were verbalizers, meaning that they combine with nominal stems to form a verb.
 
-Each of the 16 target suffixes occurred in 10 different experimental items. The word containing the target suffix (henceforth the target word) always appeared in the middle sentence and never in sentence-initial or sentence-final position. The target word had the following structure: a root followed by a target suffix, a filler suffix (which was always grammatical) and an inflection. Example (4) illustrates a target word (target suffix marked in bold):
+Each of the 16 target suffixes occurred in 10 different experimental items. The word containing the target suffix (henceforth the target word) always appeared in the second of the three sentences and never in sentence-initial or sentence-final position. The target word had the following structure: a root followed by a target suffix, a filler suffix (which was always grammatical) and an inflection. Example (4) illustrates a target word (target suffix marked in bold):
 
 (4) *nuannaartuaannarnikuuvoq*
 
@@ -146,7 +146,7 @@ For each item, NBT (a native speaker linguist) evaluated on a case-by-case basis
 
 The third sentence in each item always contained a morphologically simple word which was either lexical or grammatical. The purpose of this was to establish a word-level baseline which could serve as a reference point for analyses of the target suffixes.
 
-8 lexical and 8 grammatical baseline words were chosen (Table \@ref(tab:table2)) based on the modification criterion. The lexical words were nouns in the absolutive form. Given that Kalaallisut exhibits ergative–absolutive alignment and that the absolutive is zero-marked, these forms are morphologically simple. The grammatical words were conjunctions.
+8 lexical and 8 grammatical baseline words were chosen (Table \@ref(tab:table2)) based on the modification criterion. The lexical words were nouns in the absolutive form. Given that the absolutive is zero-marked in Kalaallisut, these forms are morphologically simple. The grammatical words were conjunctions.
 
 ```{r table2, echo=FALSE, warning=FALSE}
 baseline_words <- data.frame(
@@ -183,7 +183,7 @@ Example (5) shows a full experimental item. The target suffix and baseline word 
 
 All 160 items were constructed in collaboration with professional translators and checked and proofread by authors DDD and EEE.
 
-The lexical and grammatical target suffixes were matched, as far as possible, with respect to frequency and length (summary statistics in Table \@ref(tab:table3)). Frequency was measured as the absolute number of occurrences in the Kalaallisut corpus provided by Oqaasileriffik, The Language Secretariat of Greenland (<https://oqaasileriffik.gl/da/sprogteknologi/korpus/>). Because the available pool of suffixes was limited, perfect matching was not possible. Importantly, however, the resulting imbalance runs counter to the hypothesis: The lexical suffixes were, on average, shorter and more frequent than the grammatical suffixes. Suffix predictability was quantified as transitional probability based on the frequencies of the root and the root-suffix combination. Predictability was not matched in the design, but it was included as an independent variable in the statistical analyses.
+The lexical and grammatical target suffixes were matched, as far as possible, with respect to frequency and length (summary statistics in Table \@ref(tab:table3)). Frequency was measured as the absolute number of occurrences in the corpus of written Kalaallisut provided by Oqaasileriffik, The Language Secretariat of Greenland (<https://oqaasileriffik.gl/da/sprogteknologi/korpus/>). Because the available pool of suffixes was limited, perfect matching was not possible. Importantly, however, the resulting imbalance runs counter to the hypothesis: The lexical suffixes were, on average, shorter and more frequent than the grammatical suffixes. Suffix predictability was quantified as transitional probability based on the frequencies of the root and the root-suffix combination. Predictability was not matched in the design, but it was included as an independent variable in the statistical analyses.
 
 ```{r table3, echo=FALSE, warning=FALSE, message=FALSE}
 freq_summary_affix <- df_affix %>%
@@ -213,6 +213,7 @@ summary_table <- freq_summary_affix %>%
   ungroup()
 
 summary_table_formatted <- summary_table %>%
+  mutate(affix_type = factor(affix_type, levels = c("lexical", "grammatical"))) %>%
   mutate(
     freq_col = sprintf("%.2f (%.2f)", mean_freq, sd_freq),
     length_col = sprintf("%.2f (%.2f)", mean_length, sd_length),
@@ -233,7 +234,8 @@ summary_table_formatted <- summary_table %>%
   pivot_wider(
     names_from = affix_type,
     values_from = value
-  )
+  ) %>%
+  select(statistic, lexical, grammatical)
 
 summary_table_ht <- as_hux(summary_table_formatted)
 
@@ -275,6 +277,7 @@ summary_table_baseline <- freq_summary_baseline %>%
   ungroup()
 
 summary_table_formatted_baseline <- summary_table_baseline %>%
+  mutate(baseline_type = factor(baseline_type, levels = c("lexical", "grammatical"))) %>%
   mutate(
     freq_col = sprintf("%.2f (%.2f)", mean_freq, sd_freq),
     length_col = sprintf("%.2f (%.2f)", mean_length, sd_length)
@@ -293,7 +296,8 @@ summary_table_formatted_baseline <- summary_table_baseline %>%
   pivot_wider(
     names_from = baseline_type,
     values_from = value
-  )
+  ) %>%
+  select(statistic, lexical, grammatical)
 
 summary_table_baseline_ht <- as_hux(summary_table_formatted_baseline)
 
@@ -413,6 +417,24 @@ tbl$table_styling$abbreviation <- tibble(
   text_interpret = character()
 )
 
+# remove the reference level for structural status and relabel
+tbl <- tbl %>%
+  modify_table_body(
+    ~ .x %>%
+      dplyr::filter(
+        # remove reference level
+        !(label == "grammatical" & is.na(estimate)),
+        # remove the variable header row
+        label != "suffix type"
+      ) %>%
+      dplyr::mutate(
+        label = dplyr::case_when(
+          label == "lexical" ~ "structural status (lexical vs. grammatical)",
+          TRUE ~ label
+        )
+      )
+  )
+
 # create huxtable
 tbl_ht <- tbl %>%
   as_tibble() %>%
@@ -485,7 +507,6 @@ current_bold <- bold(tbl_ht)[, "p"]
 new_bold <- sapply(tbl_ht[, "p"], function(x) grepl("<0.001", x))
 bold(tbl_ht)[, "p"] <- current_bold | new_bold
 
-
 tbl_ht
 
 ```
@@ -534,6 +555,24 @@ tbl_ffd$table_styling$abbreviation <- tibble(
   abbreviation = character(),
   text_interpret = character()
 )
+
+# remove the reference level for structural status and relabel
+tbl_ffd <- tbl_ffd %>%
+  modify_table_body(
+    ~ .x %>%
+      dplyr::filter(
+        # remove reference level
+        !(label == "grammatical" & is.na(estimate)),
+        # remove the variable header row
+        label != "suffix type"
+      ) %>%
+      dplyr::mutate(
+        label = dplyr::case_when(
+          label == "lexical" ~ "structural status (lexical vs. grammatical)",
+          TRUE ~ label
+        )
+      )
+  )
 
 # create huxtable
 tbl_ffd_ht <- tbl_ffd %>%
@@ -658,6 +697,24 @@ tbl_gd$table_styling$abbreviation <- tibble(
   abbreviation = character(),
   text_interpret = character()
 )
+
+# remove the reference level for structural status and relabel
+tbl_gd <- tbl_gd %>%
+  modify_table_body(
+    ~ .x %>%
+      dplyr::filter(
+        # remove reference level
+        !(label == "grammatical" & is.na(estimate)),
+        # remove the variable header row
+        label != "suffix type"
+      ) %>%
+      dplyr::mutate(
+        label = dplyr::case_when(
+          label == "lexical" ~ "structural status (lexical vs. grammatical)",
+          TRUE ~ label
+        )
+      )
+  )
 
 # create huxtable
 tbl_gd_ht <- tbl_gd %>%
