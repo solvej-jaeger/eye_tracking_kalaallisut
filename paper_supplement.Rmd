@@ -20,8 +20,8 @@ source("R/09_regression_rates.R")
 
 ```
 
-## Relationship between fixation density and word length for fast vs. slow readers
-For this plot, the participants were divided into two equally sized groups based on their reading speed.
+## Relationship between fixation density and word length for fast vs. slow readers {-}
+For this plot, participants were divided into two equally sized groups based on reading speed.
 
 ```{r fixation density and word length - slow and fast readers, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -58,7 +58,7 @@ fixation_density_plot_by_speed <- ggplot(z, aes(x = current_word_length, y = mea
   geom_point(aes(size = n_words)) +
   facet_wrap(~ speed_group) +
   labs(
-    title = "Fixation density by word length for the fastest and slowest readers",
+    title = "",
     x = "word length (in characters)",
     y = "fixations per character"
   ) +
@@ -67,7 +67,9 @@ fixation_density_plot_by_speed <- ggplot(z, aes(x = current_word_length, y = mea
 fixation_density_plot_by_speed
 ```
 
-## Quadratic model to determine turning point
+## Quadratic model used to determine turning point {-}
+
+Quadratic mixed-effects model of fixation density as a function of word length.
 
 ```{r fit model and calculate turning point}
 model_fix_per_char_quadratic <- lmer(   
@@ -81,9 +83,11 @@ b <- coefs["current_word_length"]
 turning_point <- -b / (2 * a) 
 ```
 
-The turning point is when word length is 9.2 letters.
+The estimated turning point occurred at a word length of 9.2 letters.
 
-## Model for fixation density on the four word regions and the baseline words
+## Model of fixation density across word regions and baseline words {-}
+
+Mixed-effects model of fixation density with word region, region frequency, and region length as fixed effects, and random intercepts for participants.
 
 ```{r fixation density on the four word regions and the baseline words, echo=FALSE, warning=FALSE}
 ## add columns containing inflection frequency (both absolute and log10-transformed)
@@ -178,7 +182,7 @@ fix_report_target_word_and_baseline <-
       fixation_position == "affix" ~ affix_frequency_log,
       fixation_position == "fill" ~ fill_affix_frequency_log,
       fixation_position == "inflection" ~ inflection_frequency_log,
-      fixation_position == "word" ~ baseline_word_frequency_log,
+      fixation_position == "baseline word" ~ baseline_word_frequency_log,
       TRUE ~ NA_real_
     )
   )
