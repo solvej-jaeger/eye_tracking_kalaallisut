@@ -23,7 +23,7 @@ source("R/09_regression_rates.R")
 ## Relationship between fixation density and word length for fast vs. slow readers {-}
 For this plot, participants were divided into two equally sized groups based on reading speed.
 
-```{r fixation density and word length - slow and fast readers, echo=FALSE, warning=FALSE, message=FALSE}
+```{r fixation density and word length - slow and fast readers, echo=FALSE, warning=FALSE, message=FALSE, fig.width=6, fig.height=5, dpi=300}
 
 # first divide participants into two groups
 df_reading_times <- df_affix %>% 
@@ -67,6 +67,8 @@ fixation_density_plot_by_speed <- ggplot(z, aes(x = current_word_length, y = mea
 fixation_density_plot_by_speed
 ```
 
+\newpage
+
 ## Quadratic model used to determine turning point {-}
 
 Quadratic mixed-effects model of fixation density as a function of word length.
@@ -81,6 +83,7 @@ coefs <- fixef(model_fix_per_char_quadratic)
 a <- coefs["I(current_word_length^2)"] 
 b <- coefs["current_word_length"] 
 turning_point <- -b / (2 * a) 
+turning_point
 ```
 
 The estimated turning point occurred at a word length of 9.2 letters.
@@ -182,7 +185,7 @@ fix_report_target_word_and_baseline <-
       fixation_position == "affix" ~ affix_frequency_log,
       fixation_position == "fill" ~ fill_affix_frequency_log,
       fixation_position == "inflection" ~ inflection_frequency_log,
-      fixation_position == "baseline word" ~ baseline_word_frequency_log,
+      fixation_position == "word" ~ baseline_word_frequency_log,
       TRUE ~ NA_real_
     )
   )
@@ -203,7 +206,8 @@ fix_density_df <-
 
 fix_density_df$fixation_position <- 
   factor(fix_density_df$fixation_position,
-         levels = c("affix", "root", "fill", "inflection", "word"))
+         levels = c("affix", "root", "fill", "inflection", "word"),
+         labels = c("target suffix", "root", "fill", "inflection", "baseline word"))
 
 model_fix_dens <- lmer(
   fixation_density ~ fixation_position + 

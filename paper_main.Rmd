@@ -45,7 +45,18 @@ Email: natr@uni.gl
 
 <br><br>
 
-\*Corresponding author: swj@hum.ku.dk
+\*Corresponding author
+
+Solvej W. Jaeger \
+Department of Nordic Studies and Linguistics \
+University of Copenhagen \
+Njalsgade 76 \
+2300 Copenhagen S \
+Denmark \
+
+Email: swj@hum.ku.dk \
+Alternative email: solvej.jaeger@gmail.com \
+Phone: +45 53 31 33 07
 
 
 \newpage
@@ -54,7 +65,7 @@ Email: natr@uni.gl
 
 # Abstract {-}
 
-This eye-tracking study investigates the processing of multi-morphemic words during reading in Kalaallisut (Greenlandic), a so-called polysynthetic language characterized by extreme morphological richness. The study has two main aims. First, it tests the hypothesis that some Kalaallisut derivational suffixes are lexical rather than grammatical, and that this distinction is reflected in the allocation of visual attention during reading. Second, it provides an exploratory account of overall fixation patterns on multi-morphemic words in Kalaallisut reading. The hypothesis-driven analyses show that lexical suffixes elicited longer first fixation durations and gaze durations than grammatical suffixes, even when suffix frequency and length were controlled for, supporting the proposed lexical–grammatical distinction and challenging the widespread assumption that affixes form a uniformly grammatical category. In addition, suffix frequency and length significantly influenced reading measures in ways that parallel well-established word-level effects in other languages, suggesting that suffixes function as processing units in Kalaallisut reading. Turning to the exploratory analyses, long, multi-morphemic words elicited a high density of fixations compared to shorter words, indicating substantial processing demands. Within these multi-morphemic words, visual attention was asymmetrically distributed, with fixations most highly concentrated near the root at the beginning of the word.
+This eye-tracking study investigates the processing of multi-morphemic words during reading in Kalaallisut (Greenlandic), a so-called polysynthetic language characterized by extreme morphological richness. The study has two main aims. First, it tests the hypothesis that some Kalaallisut derivational suffixes are lexical rather than grammatical, and that this distinction is reflected in the allocation of visual attention during reading. Second, it provides an exploratory account of overall fixation patterns on multi-morphemic words in Kalaallisut reading. The hypothesis-driven analyses show that lexical suffixes elicited longer first fixation durations and gaze durations than grammatical suffixes, even when suffix frequency and length were controlled for, supporting the proposed lexical–grammatical distinction and challenging the widespread assumption that affixes form a uniformly grammatical category. In addition, suffix frequency and length significantly influenced reading measures in ways that parallel well-established word-level effects in other languages, suggesting that suffixes function as processing units in Kalaallisut reading. Turning to the exploratory analyses, long, multi-morphemic words elicited a high density of fixations compared to shorter words, indicating substantial processing demands. Within multi-morphemic words, visual attention was asymmetrically distributed, with fixations most highly concentrated near the root at the beginning of the word.
 
 # Keywords {-}
 
@@ -146,7 +157,7 @@ The experiment began with two practice trials, data from which were not included
 
 ### Materials
 
-Based on the modification criterion and discussions with author DDD (a linguist and native speaker of Kalaallisut), 8 lexical and 8 grammatical target suffixes were chosen (see Table \@ref(tab:table1)).
+Based on the modification criterion and discussions with author NBT (a linguist and native speaker of Kalaallisut), 8 lexical and 8 grammatical target suffixes were chosen (see Table \@ref(tab:table1)).
 
 ```{r table1, echo=FALSE, warning=FALSE}
 target_suffixes <- data.frame(
@@ -181,7 +192,7 @@ The root of the target word (including any morphophonologically motivated linkin
 
 [^4]: This ensured that the root-target suffix combination was never shorter than 10 letters, a threshold motivated by evidence from Finnish compound processing showing a shift from holistic to decompositional processing at this length [@hyonaReadingCompoundWords2024]. Keeping all roots relatively long thus avoided a potential confound whereby combinations with short target suffixes would sometimes fall below this threshold while those with longer suffixes would not.
 
-For each item, NBT (a native speaker linguist) evaluated on a case-by-case basis where the boundaries of the target suffix should be drawn. In cases where a letter (most often r) could be analyzed as belonging to two morphemes due to morphophonological overlap, it was counted as part of the non-target morpheme.
+For each item, author NBT evaluated on a case-by-case basis where the boundaries of the target suffix should be drawn. In cases where a letter (most often r) could be analyzed as belonging to two morphemes due to morphophonological overlap, it was counted as part of the non-target morpheme.
 
 The third sentence in each item always contained a morphologically simple word which was either lexical or grammatical. The purpose of this was to establish a word-level baseline which could serve as a reference point for analyses of the target suffixes.
 
@@ -220,7 +231,7 @@ Example (5) shows a full experimental item. The target suffix and baseline word 
 
     ’On the way, she meets a former (**male**) colleague.’
 
-All 160 items were constructed in collaboration with professional translators and checked and proofread by authors DDD and EEE.
+All 160 items were constructed in collaboration with professional translators and checked and proofread by authors NBT and MAH.
 
 The lexical and grammatical target suffixes were matched, as far as possible, with respect to frequency and length (summary statistics in Table \@ref(tab:table3)). Frequency was measured as the absolute number of occurrences in the corpus of written Kalaallisut provided by Oqaasileriffik, The Language Secretariat of Greenland (<https://oqaasileriffik.gl/da/sprogteknologi/korpus/>). Because the available pool of suffixes was limited, perfect matching was not possible. Importantly, however, the resulting imbalance runs counter to the hypothesis: The lexical suffixes were, on average, shorter and more frequent than the grammatical suffixes. Suffix predictability was quantified as transitional probability based on the frequencies of the root and the root-suffix combination. Predictability was not matched in the design, but it was included as an independent variable in the statistical analyses.
 
