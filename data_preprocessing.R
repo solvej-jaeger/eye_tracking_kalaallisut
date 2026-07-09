@@ -84,6 +84,12 @@ df_inflection_clean <- df_inflection_clean %>%
 fix_report_clean <- fix_report_clean %>%
   filter(!participant_id %in% participants_to_remove$participant_id)
 
+# mean and sd for the remaining participants
+accuracy_count_filtered <- accuracy_count %>%
+  filter(!participant_id %in% participants_to_remove$participant_id)
+mean_accuracy <- mean(accuracy_count_filtered$accuracy_percentage)
+sd_accuracy <- sd(accuracy_count_filtered$accuracy_percentage)
+
 # remove trials where there was a disturbance (noted in log) or participant pressed space too soon
 ###################################################################################################
 

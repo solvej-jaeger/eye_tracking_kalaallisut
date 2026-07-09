@@ -20,54 +20,50 @@ source("R/09_regression_rates.R")
 
 ```
 
-
-# Eye tracking in a polysynthetic language: Evidence for a distinction between lexical and grammatical suffixes {-}
+# Eye tracking in a polysynthetic language: Evidence for a distinction between lexical and grammatical suffixes {.unnumbered}
 
 Solvej W. Jaeger^a^\*, Johanne S. K. Nedergaard^a^, Mads Nielsen^a^, Naja B. Trondhjem^b,c^, Malu A. Hendriksen^b^, Amalie H. Joergensen^a^, Kasper Boye^a^
 
 <br><br>
 
-^a^ Department of Nordic Studies and Linguistics, University of Copenhagen, \
-Njalsgade 76, 2300 Copenhagen S, Denmark \
-Email: swj@hum.ku.dk; jskn@hum.ku.dk; mni@hum.ku.dk; srd228@alumni.ku.dk; boye@hum.ku.dk
+^a^ Department of Nordic Studies and Linguistics, University of Copenhagen,\
+Njalsgade 76, 2300 Copenhagen S, Denmark\
+Email: [swj\@hum.ku.dk](mailto:swj@hum.ku.dk){.email}; [jskn\@hum.ku.dk](mailto:jskn@hum.ku.dk){.email}; [mni\@hum.ku.dk](mailto:mni@hum.ku.dk){.email}; [srd228\@alumni.ku.dk](mailto:srd228@alumni.ku.dk){.email}; [boye\@hum.ku.dk](mailto:boye@hum.ku.dk){.email}
 
 <br>
 
-^b^ Department of Cross-Cultural and Regional Studies, University of Copenhagen, \
-Karen Blixens Plads 8, 2300 Copenhagen S, Denmark \
-Email: trondhjem@hum.ku.dk; nfj459@hum.ku.dk
+^b^ Department of Cross-Cultural and Regional Studies, University of Copenhagen,\
+Karen Blixens Plads 8, 2300 Copenhagen S, Denmark\
+Email: [trondhjem\@hum.ku.dk](mailto:trondhjem@hum.ku.dk){.email}; [nfj459\@hum.ku.dk](mailto:nfj459@hum.ku.dk){.email}
 
 <br>
 
-^c^ Centre for Language Research, Ilisimatusarfik, \
-Manutooq 1, 3905 Nuussuaq, Greenland \
-Email: natr@uni.gl
+^c^ Centre for Language Research, Ilisimatusarfik,\
+Manutooq 1, 3905 Nuussuaq, Greenland\
+Email: [natr\@uni.gl](mailto:natr@uni.gl){.email}
 
 <br><br>
 
 \*Corresponding author
 
-Solvej W. Jaeger \
-Department of Nordic Studies and Linguistics \
-University of Copenhagen \
-Njalsgade 76 \
-2300 Copenhagen S \
-Denmark \
+Solvej W. Jaeger\
+Department of Nordic Studies and Linguistics\
+University of Copenhagen\
+Njalsgade 76\
+2300 Copenhagen S\
+Denmark\
 
-Email: swj@hum.ku.dk \
-Alternative email: solvej.jaeger@gmail.com \
+Email: [swj\@hum.ku.dk](mailto:swj@hum.ku.dk){.email}\
+Alternative email: [solvej.jaeger\@gmail.com](mailto:solvej.jaeger@gmail.com){.email}\
 Phone: +45 53 31 33 07
-
 
 \newpage
 
-
-
-# Abstract {-}
+# Abstract {.unnumbered}
 
 This eye-tracking study investigates the processing of multi-morphemic words during reading in Kalaallisut (Greenlandic), a so-called polysynthetic language characterized by extreme morphological richness. The study has two main aims. First, it tests the hypothesis that some Kalaallisut derivational suffixes are lexical rather than grammatical, and that this distinction is reflected in the allocation of visual attention during reading. Second, it provides an exploratory account of overall fixation patterns on multi-morphemic words in Kalaallisut reading. The hypothesis-driven analyses show that lexical suffixes elicited longer first fixation durations and gaze durations than grammatical suffixes, even when suffix frequency and length were controlled for, supporting the proposed lexical–grammatical distinction and challenging the widespread assumption that affixes form a uniformly grammatical category. In addition, suffix frequency and length significantly influenced reading measures in ways that parallel well-established word-level effects in other languages, suggesting that suffixes function as processing units in Kalaallisut reading. Turning to the exploratory analyses, long, multi-morphemic words elicited a high density of fixations compared to shorter words, indicating substantial processing demands. Within multi-morphemic words, visual attention was asymmetrically distributed, with fixations most highly concentrated near the root at the beginning of the word.
 
-# Keywords {-}
+# Keywords {.unnumbered}
 
 eye tracking; Kalaallisut; polysynthesis; affixes; grammar-lexicon distinction; attention
 
@@ -77,7 +73,9 @@ eye tracking; Kalaallisut; polysynthesis; affixes; grammar-lexicon distinction; 
 
 Eye tracking during reading gives us access to fine-grained data on language processing. Decades of research in this field have produced a number of well-established insights, for example that more frequent and more predictable words are processed faster than their less frequent or less predictable counterparts [@ehrlich1981; @ellisFrequencyEffectsLanguage2002; @lowderLexicalPredictabilityNatural2018], and that shorter words are read more quickly than longer ones [@justTheoryReadingEye1980; @bertramLengthComplexWord2003]. However, most eye-tracking research has concentrated on Indo-European languages, particularly English [see @siegelmanExpandingHorizonsCrosslinguistic2022], leaving languages with more complex morphological structures under-studied. This raises the possibility that many widely accepted conclusions about word processing and reading may not generalize across languages with different morphological patterns. Broadening the empirical base of eye-tracking research is essential for assessing the universality of current models.
 
-The present study contributes to this goal by examining reading in Kalaallisut (Greenlandic), a language characterized by extreme morphological richness. Spoken by approximately 50,000 people and holding official status in Greenland, Kalaallisut features an exceptionally elaborate morphological system, with an estimated 300-400 productive suffixes [@fortescueAffixOrderingWest1980], and is often highlighted as a prototypical example of polysynthesis [@mattissenSubTypesPolysynthesis2017; @trudgillAnthropologicalSettingPolysynthesis2017]. The major word classes in Kalaallisut are verbs and nouns, both of which minimally consist of a root and an inflectional ending. Between these elements, an (in principle) unlimited number of derivational suffixes may occur [@fortescueWestGreenlandic1984; @kahnWestGreenlandicEssential2021]. Some derivational suffixes are verbalizing or nominalizing, and multiple base class shifts can occur within a single word. Moreover, many derivational suffixes contribute meanings that would typically be expressed by lexical words in more analytic languages (e.g., *-tor* 'eat' and *-nerar* 'say'). As a result, individual words in Kalaallisut may contain multiple constituents, including, for example, both a predicate and an object, and it is not uncommon for an entire sentence to be expressed by a single word. An example is given in (1) [example from @fortescueWestGreenlandic1984: 315]:
+The present study contributes to this goal by examining reading in Kalaallisut (Greenlandic), a language characterized by extreme morphological richness. Kalaallisut is spoken by approximately 50,000 people and holds official status in Greenland, where it is widely used in administration, schools, and media, including newspapers and broadcasting. The language features an exceptionally elaborate morphological system, with an estimated 300-400 productive suffixes [@fortescueAffixOrderingWest1980], and is often highlighted as a prototypical example of polysynthesis [@mattissenSubTypesPolysynthesis2017; @trudgillAnthropologicalSettingPolysynthesis2017]. The major word classes in Kalaallisut are verbs and nouns, both of which minimally consist of a root and an inflectional ending. Between these elements, an (in principle) unlimited number of derivational suffixes may occur [@fortescueWestGreenlandic1984; @kahnWestGreenlandicEssential2021]. Some derivational suffixes are verbalizing or nominalizing, and multiple base class shifts can occur within a single word. Moreover, many derivational suffixes contribute meanings that would typically be expressed by lexical words in more analytic languages (e.g., *-tor* 'eat' and *-nerar* 'say'). As a result, individual words in Kalaallisut may contain multiple constituents, including, for example, both a predicate and an object, and it is not uncommon for an entire sentence to be expressed by a single word. An example is given in (1) [example from @fortescueWestGreenlandic1984: 315][^1]:
+
+[^1]: Gloss abbreviations used in this paper: 1 = 1st person; 3 = 3rd person; CAUS = causative; CONSEQ = consequential mood; DECL = declarative mood; NEG = negation; PASS = passive; PL = plural; PRF = perfect; SG = singular.
 
 (1) *annerulersinneqarsinnaasorinngikkaluarpakka*
 
@@ -133,17 +131,17 @@ Data and analysis scripts are available here: <https://github.com/solvej-jaeger/
 
 ### Participants
 
-A total of 52 native speakers of Kalaallisut participated in the experiment (40 female, mean age = 27.1)[^1]. Of these, 45 were residents of Greenland and 7 of Denmark. None reported being dyslexic. Participants were informed that the experiment involved reading sentences on a screen while their eye movements were tracked. All participants completed a short questionnaire about their demographic and language background. They received a gift as acknowledgement of their participation.
+A total of 52 native speakers of Kalaallisut participated in the experiment (40 female, mean age = 27.1)[^2]. Of these, 45 were residents of Greenland and 7 of Denmark. None reported being dyslexic. Participants were informed that the experiment involved reading sentences on a screen while their eye movements were tracked. All participants completed a short questionnaire about their demographic and language background. They received a gift as acknowledgement of their participation.
 
-[^1]: One of the participants only completed half of the experiment due to physical discomfort.
+[^2]: One of the participants only completed half of the experiment due to physical discomfort.
 
 ### Apparatus and experimental procedure
 
-Movements of the right eye were recorded with an Eyelink Portable Duo eye tracker (SR Research, Ontario, Canada), sampling at 1000 Hz[^2]. For the first 40 participants, sentences were displayed on a 24-inch monitor (brand: Philips, model ID: 240V55QDSB/00, resolution: 1920x1080) placed 90 cm from the subjects. For the remaining 12 participants, sentences were presented on a 27-inch monitor (brand: HP, model ID: HP E27m G4, resolution: 1920x1080) placed 104 cm from the subjects. In both cases, the screen width subtended 32 degrees of visual angle (the full trackable range of the eye tracker)[^3].
+Movements of the right eye were recorded with an Eyelink Portable Duo eye tracker (SR Research, Ontario, Canada), sampling at 1000 Hz[^3]. For the first 40 participants, sentences were displayed on a 24-inch monitor (brand: Philips, model ID: 240V55QDSB/00, resolution: 1920x1080) placed 90 cm from the subjects. For the remaining 12 participants, sentences were presented on a 27-inch monitor (brand: HP, model ID: HP E27m G4, resolution: 1920x1080) placed 104 cm from the subjects. In both cases, the screen width subtended 32 degrees of visual angle (the full trackable range of the eye tracker)[^4].
 
-[^2]: For two participants, it was not possible to calibrate the tracker using the right eye. In these two cases, the left eye was tracked instead.
+[^3]: For two participants, it was not possible to calibrate the tracker using the right eye. In these two cases, the left eye was tracked instead.
 
-[^3]: Two different monitors were used because the first 40 participants were tested in Greenland and the last 12 in Denmark.
+[^4]: Two different monitors were used because the first 40 participants were tested in Greenland and the last 12 in Denmark.
 
 The experiment was constructed in Experiment Builder (SR Research). Sentences were displayed in Courier New, font size 19. Each letter subtended 0.38 degrees of visual angle. The background was white and the text color black.
 
@@ -157,7 +155,7 @@ The experiment began with two practice trials, data from which were not included
 
 ### Materials
 
-Based on the modification criterion and discussions with author NBT (a linguist and native speaker of Kalaallisut), 8 lexical and 8 grammatical target suffixes were chosen (see Table \@ref(tab:table1)).
+Based on the modification criterion and discussions with author NBT, a linguist and native speaker of Kalaallisut, 8 lexical and 8 grammatical target suffixes were chosen (see Table \@ref(tab:table1)) (note that in some cases, unmodifiable, hence grammatical, suffixes have English translations that are modifiable).
 
 ```{r table1, echo=FALSE, warning=FALSE}
 target_suffixes <- data.frame(
@@ -167,7 +165,7 @@ target_suffixes <- data.frame(
           "", "‘go to’", "‘use, eat’", "‘look for’ / ‘celebrate’", "‘provide with’"),
   `Grammatical suffixes` = c("", "-qqajaa", "-nikuu", "-jumaar", "-qqammer",
                                     "", "-nnngor", "-giig", "-miit", "-giiaar"),
-  `  ` = c("", "‘about to’", "PRF", "‘vague future’", "‘recently’",
+  `  ` = c("", "‘about to’", "‘perfect tense/aspect’", "‘vague future’", "‘recently’",
            "", "‘become’", "‘be mutually’", "‘be in/on’", "‘be mutually – several’"),
   check.names = FALSE
 )
@@ -188,9 +186,9 @@ Each of the 16 target suffixes occurred in 10 different experimental items. The 
 
     ‘he was always happy’
 
-The root of the target word (including any morphophonologically motivated linking elements) was always between 7 and 11 letters long[^4]. A requirement was that the root have its own entry in the online dictionaries provided by Oqaasileriffik, The Language Secretariat of Greenland (<https://ordbog.gl/>). The combination of root and target suffix must not have its own entry in the dictionary, as this would indicate that it is a lexicalized combination.
+The root of the target word (including any morphophonologically motivated linking elements) was always between 7 and 11 letters long[^5]. A requirement was that the root have its own entry in the online dictionaries provided by Oqaasileriffik, The Language Secretariat of Greenland (<https://ordbog.gl/>). The combination of root and target suffix must not have its own entry in the dictionary, as this would indicate that it is a lexicalized combination.
 
-[^4]: This ensured that the root-target suffix combination was never shorter than 10 letters, a threshold motivated by evidence from Finnish compound processing showing a shift from holistic to decompositional processing at this length [@hyonaReadingCompoundWords2024]. Keeping all roots relatively long thus avoided a potential confound whereby combinations with short target suffixes would sometimes fall below this threshold while those with longer suffixes would not.
+[^5]: This ensured that the root-target suffix combination was never shorter than 10 letters, a threshold motivated by evidence from Finnish compound processing showing a shift from holistic to decompositional processing at this length [@hyonaReadingCompoundWords2024]. Keeping all roots relatively long thus avoided a potential confound whereby combinations with short target suffixes would sometimes fall below this threshold while those with longer suffixes would not.
 
 For each item, author NBT evaluated on a case-by-case basis where the boundaries of the target suffix should be drawn. In cases where a letter (most often r) could be analyzed as belonging to two morphemes due to morphophonological overlap, it was counted as part of the non-target morpheme.
 
@@ -372,9 +370,9 @@ summary_table_baseline_ht
 
 Fixations and saccades were segmented in DataViewer (SR Research) with EyeLink’s standard algorithm. DataViewer generated a fixation report, which was then further processed in Get Reading Measures (SR Research) to calculate standard reading measures for the specific regions of interest.
 
-Data from three participants were excluded from analysis due to chance level performance on the comprehension questions (cut-off determined using a binomial test against 50% accuracy, p\<.05). The remaining data were cleaned through the steps in Table \@ref(tab:table5)[^5].
+Data from three participants were excluded from analysis due to chance level performance on the comprehension questions (cut-off determined using a binomial test against 50% accuracy, p\<.05). Among the remaining participants, the average accuracy on the comprehension questions was 84% (SD = 6.7%), indicating that participants generally understood the sentences they read. The remaining data were cleaned through the steps in Table \@ref(tab:table5)[^6].
 
-[^5]: In step 4, all trials were visually inspected in DataViewer and excluded if the lines of fixations did not align with the lines of text for sentence 2 and 3 (e.g., due to head movement or calibration issues). For each trial, misalignment on sentence 1 was accepted, because data from sentence 1 are not included in the analyses. While this step involves some subjective judgment, the statistical analyses were performed both with and without these trials and yielded significant results in the same directions in both cases. Instead of excluding these trials, an alternative approach would have been to use post-processing error correction where fixation positions are adjusted to align with the text. However, we chose not to do this because there were only relatively few problematic trials, and because such error correction also involves some degree of guesswork as to where fixations belong.
+[^6]: In step 4, all trials were visually inspected in DataViewer and excluded if the lines of fixations did not align with the lines of text for sentence 2 and 3 (e.g., due to head movement or calibration issues). For each trial, misalignment on sentence 1 was accepted, because data from sentence 1 are not included in the analyses. While this step involves some subjective judgment, the statistical analyses were performed both with and without these trials and yielded significant results in the same directions in both cases. Instead of excluding these trials, an alternative approach would have been to use post-processing error correction where fixation positions are adjusted to align with the text. However, we chose not to do this because there were only relatively few problematic trials, and because such error correction also involves some degree of guesswork as to where fixations belong.
 
 ```{r table5, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -411,9 +409,9 @@ table5_ht
 
 ```
 
-Overall, 6.97% of all trials were excluded in this data filtering process, leaving 7,225 trials for the final analysis[^6].
+Overall, 6.97% of all trials were excluded in this data filtering process, leaving 7,225 trials for the final analysis[^7].
 
-[^6]: The raw data and preprocessing scripts are available here: <https://github.com/solvej-jaeger/eye_tracking_kalaallisut>.
+[^7]: The raw data and preprocessing scripts are available here: <https://github.com/solvej-jaeger/eye_tracking_kalaallisut>.
 
 Statistical analyses were conducted using linear mixed-effects models implemented in the lme4 package [@batesFittingLinearMixedEffects2015] in R, version 4.4.2 [@rcoreteamLanguageEnvironmentStatistical2021].
 
@@ -421,13 +419,15 @@ Statistical analyses were conducted using linear mixed-effects models implemente
 
 The experiment was designed to test the prediction that Kalaallisut suffixes classified as lexical attract more attention during reading than those classified as grammatical. This yields two specific predictions: 1) grammatical suffixes are skipped more than lexical suffixes, and 2) fixation durations are longer for lexical than for grammatical suffixes. We tested these hypotheses using three measures of the critical region [following @staubFunctionContentWord2024]: skipping probability (the probability that the target region is skipped on the first pass), first fixation duration (the duration of the first fixation on the target region - henceforth FFD) and gaze duration (the sum of all fixation durations on the target region before the region is exited to the right or left - henceforth GD). Together, these measures capture first-pass processing of the region. That is, fixations occurring after the region has been exited and subsequently re-entered are not included in these measures.
 
+Descriptive statistics (means and standard deviations) for the dependent measures are provided in the Supplementary Materials. The hypotheses were tested using mixed-effects models with suffix-level predictors and random intercepts for participants.
+
 Following previous work, fixation durations were log-transformed prior to analysis [@hyonaReadingCompoundWords2024; @staubFunctionContentWord2024], as they are typically skewed with many short and few long fixations. To reduce skew, we also used log10-transformed measures of frequency (skewness = 1.45) and predictability (skewness = 3.4).
 
 ### Skipping
 
-Suffix skipping probabilities were analyzed using a generalized linear mixed-effects model with structural status (lexical/grammatical), frequency, length, and predictability as fixed effects and with random intercepts for participants (Table \@ref(tab:table6))[^7]. The model revealed no significant effect of structural status, providing no support for the hypothesis. However, suffix frequency was positively associated with skipping (more frequent suffixes were skipped more often), while suffix length showed a negative association (longer suffixes were skipped less).
+Suffix skipping probabilities were analyzed using a generalized linear mixed-effects model with structural status (lexical/grammatical), frequency, length, and predictability as fixed effects and with random intercepts for participants (Table \@ref(tab:table6))[^8]. The model revealed no significant effect of structural status, providing no support for the hypothesis. However, suffix frequency was positively associated with skipping (more frequent suffixes were skipped more often), while suffix length showed a negative association (longer suffixes were skipped less).
 
-[^7]: Interactions were not included in this model (or the other models reported in this study) because 1) including them would increase risk of overfitting, 2) we wanted to prioritize interpretability, and 3) we had no theoretical motivation for including interactions since we had attempted to match the features of the contrasting groups of suffixes.
+[^8]: Interactions were not included in this model (or the other models reported in this study) because 1) including them would increase risk of overfitting, 2) we wanted to prioritize interpretability, and 3) we had no theoretical motivation for including interactions since we had attempted to match the features of the contrasting groups of suffixes.
 
 ```{r table6, echo=FALSE, warning=FALSE}
 tbl <- tbl_regression(
@@ -448,7 +448,7 @@ tbl <- tbl %>%
   modify_header(
     estimate ~ "β", 
     std.error ~ "SE",
-    statistic ~ "z",
+    statistic ~ "t",
     p.value ~ "p"
   ) %>%
   # hide unwanted columns if they exist
@@ -491,11 +491,11 @@ tbl_ht <- tbl %>%
   as_hux()
 
 # italicize statistical symbols in header
-stat_cols <- which(colnames(tbl_ht) %in% c("β","z","p"))
+stat_cols <- which(colnames(tbl_ht) %in% c("β","t","p"))
 italic(tbl_ht)[1, stat_cols] <- TRUE
 
 # right-align numeric columns
-num_cols <- which(colnames(tbl_ht) %in% c("β", "SE", "z", "p"))
+num_cols <- which(colnames(tbl_ht) %in% c("β", "SE", "t", "p"))
 align(tbl_ht)[, num_cols] <- "right"
 align(tbl_ht)[, 1] <- "left"
 
@@ -587,7 +587,7 @@ tbl_ffd <- tbl_ffd %>%
   modify_header(
     estimate ~ "β",
     std.error ~ "SE",
-    statistic ~ "z",
+    statistic ~ "t",
     p.value ~ "p"
   ) %>%
   # hide unwanted columns if they exist
@@ -630,11 +630,11 @@ tbl_ffd_ht <- tbl_ffd %>%
   as_hux()
 
 # italicize statistical symbols in header
-stat_cols <- which(colnames(tbl_ffd_ht) %in% c("β","z","p"))
+stat_cols <- which(colnames(tbl_ffd_ht) %in% c("β","t","p"))
 italic(tbl_ffd_ht)[1, stat_cols] <- TRUE
 
 # right-align numeric columns
-num_cols <- which(colnames(tbl_ffd_ht) %in% c("β", "SE", "z", "p"))
+num_cols <- which(colnames(tbl_ffd_ht) %in% c("β", "SE", "t", "p"))
 align(tbl_ffd_ht)[, num_cols] <- "right"
 align(tbl_ffd_ht)[, 1] <- "left"
 
@@ -729,7 +729,7 @@ tbl_gd <- tbl_gd %>%
   modify_header(
     estimate ~ "β", 
     std.error ~ "SE",
-    statistic ~ "z",
+    statistic ~ "t",
     p.value ~ "p"
   ) %>%
   # hide unwanted columns if they exist
@@ -772,11 +772,11 @@ tbl_gd_ht <- tbl_gd %>%
   as_hux()
 
 # italicize statistical symbols in header
-stat_cols <- which(colnames(tbl_gd_ht) %in% c("β","z","p"))
+stat_cols <- which(colnames(tbl_gd_ht) %in% c("β","t","p"))
 italic(tbl_gd_ht)[1, stat_cols] <- TRUE
 
 # right-align numeric columns
-num_cols <- which(colnames(tbl_gd_ht) %in% c("β", "SE", "z", "p"))
+num_cols <- which(colnames(tbl_gd_ht) %in% c("β", "SE", "t", "p"))
 align(tbl_gd_ht)[, num_cols] <- "right"
 align(tbl_gd_ht)[, 1] <- "left"
 
@@ -851,9 +851,9 @@ tbl_gd_ht
 
 As noted at the outset, the second of the study’s two aims was exploratory: to examine general fixation patterns and gain an overall picture of how multi-morphemic words are processed in Kalaallisut reading. Below, we summarize the main exploratory findings.
 
-Preliminary observations during data collection suggested that readers' fixations tended to cluster more densely on long, complex words than on shorter, simpler ones. To investigate this, we examined fixation density, calculated as the total number of fixations on a word divided by its number of letters, as a function of word length. As Figure \@ref(fig:figure1) shows, this relationship follows a U-shaped curve: fixation density decreases as word length increases up to a certain point, then increases again for longer words[^8]. A quadratic fit places the turning point at approximately nine letters (see Supplementary Materials).
+Preliminary observations during data collection suggested that readers' fixations tended to cluster more densely on long, complex words than on shorter, simpler ones. To investigate this, we examined fixation density, calculated as the total number of fixations on a word divided by its number of letters, as a function of word length. As Figure \@ref(fig:figure1) shows, this relationship follows a U-shaped curve: fixation density decreases as word length increases up to a certain point, then increases again for longer words[^9]. A quadratic fit places the turning point at approximately nine letters (see Supplementary Materials).
 
-[^8]: This plot is based on fixation data for all words from sentence 2 and 3 in each item, excluding the first and last word of each sentence.
+[^9]: This plot is based on fixation data for all words from sentence 2 and 3 in each item, excluding the first and last word of each sentence.
 
 ```{r figure1, echo=FALSE, warning=FALSE, message=FALSE, fig.width=4, fig.height=3, dpi=300, fig.cap="Fixation density as a function of word length"}
 
@@ -870,9 +870,9 @@ fixation_density_plot
 ggsave("figures/figure_1.png", plot = fixation_density_plot, width = 6, height = 4)
 ```
 
-This pattern indicates that very long words demand considerably more attentional resources than shorter ones. But how is this attention distributed within a long word? To address this question, we focused on the 4-morpheme target words. Figure \@ref(fig:figure2) shows the mean fixation duration per letter for three bins within each of the four morphemes in the target word[^9]. We divided each morpheme into three bins because the shortest morphemes were three letters long (a few of the inflections were only two letters, but these were excluded from this plot). The data reveal a clear pattern: Readers' attention peaks near the middle of the root morpheme, after which it gradually decreases across the word, with inflections receiving minimal attention – in fact, on average 51% of inflections were skipped in the first pass.
+This pattern indicates that very long words demand considerably more attentional resources than shorter ones. But how is this attention distributed within a long word? To address this question, we focused on the 4-morpheme target words. Figure \@ref(fig:figure2) shows the mean fixation duration per letter for three bins within each of the four morphemes in the target word[^10]. We divided each morpheme into three bins because the shortest morphemes were three letters long (a few of the inflections were only two letters, but these were excluded from this plot). The data reveal a clear pattern: Readers' attention peaks near the middle of the root morpheme, after which it gradually decreases across the word, with inflections receiving minimal attention – in fact, on average 51% of inflections were skipped in the first pass.
 
-[^9]: We use fixation durations here rather than absolute fixation numbers, as they have the potential to more accurately reflect small differences in attention allocation.
+[^10]: We use fixation durations here rather than absolute fixation numbers, as they have the potential to more accurately reflect small differences in attention allocation.
 
 ```{r figure2, echo=FALSE, message=FALSE, warning=FALSE, fig.width=4, fig.height=2, dpi=300, fig.cap="Mean fixation duration per letter across target word"}
 
@@ -898,9 +898,9 @@ fix_times_within_regions_plot
 ggsave("figures/figure_2.png", plot = fix_times_within_regions_plot, width = 6, height = 4)
 ```
 
-Interestingly, a similar-looking pattern (though on a smaller scale) emerges for the morphologically simple baseline words (Figure \@ref(fig:figure3))[^10]. However, the peak fixation duration per letter is higher for the multi-morphemic target words (139 ms) than for the baseline words (92 ms).
+Interestingly, a similar-looking pattern (though on a smaller scale) emerges for the morphologically simple baseline words (Figure \@ref(fig:figure3))[^11]. However, the peak fixation duration per letter is higher for the multi-morphemic target words (139 ms) than for the baseline words (92 ms).
 
-[^10]: This plot has four bins, because the shortest baseline words had four letters.
+[^11]: This plot has four bins, because the shortest baseline words had four letters.
 
 ```{r figure3, echo=FALSE, message=FALSE, warning=FALSE, fig.width=4, fig.height=2, dpi=300, fig.cap="Mean fixation duration per letter across baseline word"}
 
@@ -995,11 +995,11 @@ regression_barplot_morphemes_and_words
 
 ```
 
-Finally, we looked at regression rates for the root morphemes and target suffixes compared to the baseline words (Figure \@ref(fig:figure5)). We found that the roots in the target words were regressed to more often than the target suffixes, and that baseline words were regressed to less often than the target suffixes. A generalized linear mixed-effects model with regression (0/1) as dependent variable and type (root/suffix/baseline word) and skipping status (whether the region had been skipped[^11]) as independent variables and random intercepts for participants confirmed that both these differences were statistically significant: There were more regressions to roots than to target suffixes `r paste0("($\\beta$ = ", round(coef(summary(regression_model_root_suffix_word))[2,"Estimate"],2),"; SE = ", round(coef(summary(regression_model_root_suffix_word))[2,"Std. Error"],2),"; z = ", round(coef(summary(regression_model_root_suffix_word))[2,"z value"],2),"; *p* < 0.001)")` and fewer regressions to baseline words than to target suffixes `r paste0("($\\beta$ = ",round(coef(summary(regression_model_root_suffix_word))[3,"Estimate"],2),"; SE = ", round(coef(summary(regression_model_root_suffix_word))[3,"Std. Error"],2),"; z = ", round(coef(summary(regression_model_root_suffix_word))[3,"z value"],2),"; *p* < 0.001)")`. This finding that within-word regressions are common in multi-morphemic words (almost 30% of roots were regressed to) contributes to explaining the patterns in Figures \@ref(fig:figure1) and \@ref(fig:figure2), as regressions to a region lead to a higher fixation density on that region.
+Finally, we looked at regression rates for the root morphemes and target suffixes compared to the baseline words (Figure \@ref(fig:figure5)). We found that the roots in the target words were regressed to more often than the target suffixes, and that baseline words were regressed to less often than the target suffixes. A generalized linear mixed-effects model with regression (0/1) as dependent variable and type (root/suffix/baseline word) and skipping status (whether the region had been skipped[^12]) as independent variables and random intercepts for participants confirmed that both these differences were statistically significant: There were more regressions to roots than to target suffixes `r paste0("($\\beta$ = ", round(coef(summary(regression_model_root_suffix_word))[2,"Estimate"],2),"; SE = ", round(coef(summary(regression_model_root_suffix_word))[2,"Std. Error"],2),"; z = ", round(coef(summary(regression_model_root_suffix_word))[2,"z value"],2),"; *p* < 0.001)")` and fewer regressions to baseline words than to target suffixes `r paste0("($\\beta$ = ",round(coef(summary(regression_model_root_suffix_word))[3,"Estimate"],2),"; SE = ", round(coef(summary(regression_model_root_suffix_word))[3,"Std. Error"],2),"; z = ", round(coef(summary(regression_model_root_suffix_word))[3,"z value"],2),"; *p* < 0.001)")`. This finding that regressions are common in multi-morphemic words (almost 30% of roots were regressed to) contributes to explaining the patterns in Figures \@ref(fig:figure1) and \@ref(fig:figure2), as regressions to a region lead to a higher fixation density on that region.
 
-[^11]: Regression probability is higher if the region has been skipped in the first pass.
+[^12]: Regression probability is higher if the region has been skipped in the first pass.
 
-Taken together, our exploratory findings show that processing multi-morphemic words in Kalaallisut reading requires considerable attentional resources. Within-word regressions are common, and suffixes within long words are skipped less often than individual simple words of similar length. Overall, in multi-morphemic words, attention is most highly concentrated on the root morpheme and decreases throughout the word, reaching its lowest level on the inflection.
+Taken together, our exploratory findings show that processing multi-morphemic words in Kalaallisut reading requires considerable attentional resources. Regressions are common, and suffixes within long words are skipped less often than individual simple words of similar length. Overall, in multi-morphemic words, attention is most highly concentrated on the root morpheme and decreases throughout the word, reaching its lowest level on the inflection.
 
 # Discussion
 
@@ -1007,7 +1007,7 @@ The present study set out to investigate how multi-morphemic words are processed
 
 Taken together, the results show how readers navigate morphologically complex words in Kalaallisut. Long, multi-morphemic words elicit a high density of fixations, suggesting that they place considerable demands on readers' attentional resources. Within the word, this attention is asymmetrically distributed: Visual attention is most highly concentrated on the root and declines across the word, with relatively little attention devoted to the inflectional ending.
 
-This pattern does not in itself demonstrate sensitivity to morphological structure: In principle, readers could rely on syllables or larger multi-morpheme chunks as processing units when reading complex words. The suffix-level analyses, however, offer more direct evidence that individual morphemes function as units in reading: Fixation patterns for the suffixes were systematically influenced by suffix frequency, length, and structural status. As these patterns parallel effects typically observed at the word level [see e.g. @raynerEyeMovementsWord2011; @kupermanWordLengthFrequency2024], they suggest that individual morphemes serve as processing units in Kalaallisut reading, much like words do in more analytic languages.
+This pattern does not in itself demonstrate sensitivity to morphological structure: In principle, readers could rely on syllables or larger multi-morpheme chunks as processing units when reading complex words. The suffix-level analyses, however, offer more direct evidence that individual morphemes function as units in reading: Fixation patterns for the suffixes were systematically influenced by suffix frequency, length, and structural status. As these patterns parallel effects typically observed at the word level [see e.g. @raynerEyeMovementsWord2011; @kupermanWordLengthFrequency2024], they suggest that individual morphemes can serve as processing units in Kalaallisut reading, much like words do in more analytic languages.
 
 At the same time, however, the results also underscore that the processing of morphemes is not simply analogous to processing of simple words in Kalaallisut. This is illustrated, for example, by the distinct skipping patterns observed for suffixes compared to whole simple words, and by the regression patterns, which show frequent regressions to the root in the target words and, to a lesser extent, to the target suffixes – while regressions to the baseline words were less frequent.
 
@@ -1025,11 +1025,11 @@ These results have broad theoretical implications, as they challenge a widesprea
 
 ## Morphemes as processing units
 
-Beyond the effects of structural status, the suffix-level analyses revealed robust effects of frequency and length: More frequent suffixes were skipped more often and received shorter fixation times, whereas longer suffixes were skipped less frequently and attracted longer gaze durations. As mentioned in section \@ref(discussion), these patterns closely mirror well-established word-level effects reported for other languages [@raynerEyeMovementsWord2011; @kupermanWordLengthFrequency2024]. Although length showed a reverse effect for FFD – longer suffixes elicited shorter initial fixations – this pattern is not unprecedented and has been reported previously for Finnish compound words [@bertramLengthComplexWord2003]. No independent effects of suffix predictability were observed, likely due to its correlation with frequency or limitations of the corpus-based predictability measures.
+Beyond the effects of structural status, the suffix-level analyses revealed robust effects of frequency and length: More frequent suffixes were skipped more often and received shorter fixation times, whereas longer suffixes were skipped less frequently and attracted longer gaze durations. As mentioned in section \@ref(discussion), these patterns closely mirror well-established word-level effects reported for other languages [@raynerEyeMovementsWord2011; @kupermanWordLengthFrequency2024]. Although length showed a reverse effect for FFD – longer suffixes elicited shorter initial fixations – this pattern is not unprecedented and has been reported previously for Finnish compound words [@bertramLengthComplexWord2003]. It is likely that the pattern is a reflection of increased refixation probability as a function of length (the finding that gaze durations increased as a function of suffix length is consistent with this interpretation). No independent effects of suffix predictability were observed, likely due to its correlation with frequency or limitations of the corpus-based predictability measures.
 
-Taken together, these findings demonstrate systematic attentional differences at the morpheme level that parallel classic word-level effects in eye-movement research. This strongly suggests that multi-morphemic Kalaallisut words are morphologically decomposed during reading and that individual morphemes function as processing units (especially the effects of frequency and structural status support this interpretation, as the effects of morpheme length could also be due to syllabic rather than morphemic segmentation).
+Taken together, these findings demonstrate systematic attentional differences at the morpheme level that parallel classic word-level effects in eye-movement research. This suggests that multi-morphemic Kalaallisut words are morphologically decomposed during reading and that individual morphemes function as processing units (especially the effects of frequency and structural status support this interpretation, as the effects of morpheme length could also be due to syllabic rather than morphemic segmentation).
 
-These results have important implications for models of reading and for eye-tracking research. Most influential models of eye-movement control in reading (e.g. E-Z Reader [@reichleEZReaderModel2003] and SWIFT [@engbertSWIFTDynamicalModel2005]) assume that the word is the fundamental unit of processing. While word recognition is undoubtedly central in more analytic languages, this assumption is difficult to sustain for Kalaallisut, where words are often long and highly complex and have low token frequency. For such languages, it may be more appropriate to view reading as driven by morpheme and possibly morpheme chunk recognition rather than word recognition.
+These results have important implications for models of reading and for eye-tracking research. Most influential models of eye-movement control in reading (e.g. E-Z Reader [@reichleEZReaderModel2003] and SWIFT [@engbertSWIFTDynamicalModel2005]) assume that the word is the fundamental unit of processing. While this assumption is well motivated for more analytic languages, it is less straightforward to apply to Kalaallisut. Kalaallisut words are often very long, highly complex, and individually infrequent, making holistic word recognition difficult and reducing the plausibility of whole-word processing as the default strategy. Instead, the present findings suggest that readers make use of morphemes as processing units, particularly in cases where a word is too long and complex to process as a single unit.
 
 Methodologically, the present study demonstrates the value of analyzing eye movements within words. By treating individual suffixes as independent analysis regions, it provides a level of granularity that word-level designs cannot achieve. This approach is particularly well suited to morphologically rich languages like Kalaallisut and opens up new avenues for investigating morphological processing in real time.
 
@@ -1055,13 +1055,15 @@ Future work could help disentangle these interacting factors by examining eye mo
 
 Although individual suffixes in Kalaallisut may correspond to separate words in more analytic languages, and although our results indicate that suffixes function as processing units in Kalaallisut reading, the observed within-word attention profile (Figure \@ref(fig:figure2)) clearly shows that reading a four-morpheme Kalaallisut word is not simply equivalent to reading three or four independent words. Instead, morphemes are processed within a structured and highly asymmetric attentional landscape shaped by morphological organization and visual position. Comparing the profiles of attention distribution within words (Figures \@ref(fig:figure2) and \@ref(fig:figure3)) further highlights this distinction: While fixation patterns for the morphologically simple baseline words show a characteristic peak in the second quartile of the word, suffixes do not exhibit a comparable pattern. Thus, reading suffixes cannot be equated with reading independent words.
 
-Further evidence for this comes from skipping behavior (Figure \@ref(fig:figure4)). Even though the baseline words were selected to match the target suffixes in morphological complexity and structural status, they were skipped more frequently than the suffixes. This is noteworthy because suffixes are, if anything, more predictable than words, given the limited inventory of suffixes in the language[^12].
+Further evidence for this comes from skipping behavior (Figure \@ref(fig:figure4)). Even though the baseline words were selected to match the target suffixes in morphological complexity and structural status, they were skipped more frequently than the suffixes. This is noteworthy because suffixes are, if anything, more predictable than words, given the limited inventory of suffixes in the language[^13].
 
-[^12]: We were not able to obtain reliable predictability measures for the baseline words, so this has not been further explored in the present study.
+[^13]: We were not able to obtain reliable predictability measures for the baseline words, so this has not been further explored in the present study.
 
 A plausible explanation is that morpheme boundaries are difficult to identify parafoveally in Kalaallisut, as they, unlike word boundaries, are not marked by spaces or other visual cues. Earlier studies have shown that adding visual cues to mark morpheme boundaries can make reading of complex words more efficient [see e.g. @bertramRoleHyphensConstituent2013]. The lack of such cues may make it hard to parafoveally determine what can be skipped. This may also explain why there is no fixation peak in the second quartile for suffixes: While spaces guide eye movements between words, the absence of such cues for morphemes may limit optimal saccade targeting to suffixes within complex words.
 
-Together, these findings – along with the high fixation density observed for long words (Figure \@ref(fig:figure1)) – suggest that reading multi-morphemic words in Kalaallisut places relatively high demands on the processing system. Given that such words are pervasive in the language, this raises the broader question of whether reading Kalaallisut is, all else being equal, more resource demanding than reading languages characterized by shorter words, such as English. While this question remains open and requires targeted cross-linguistic research, it is noteworthy that Kalaallisut orthography is relatively young and was developed on the basis of European writing traditions, which may not be optimally suited to the language’s morphological structure. This raises the possibility that readers of Kalaallisut may benefit from alternative orthographic solutions, introducing visual cues to facilitate the processing of complex words.
+Together, these findings – along with the high fixation density observed for long words (Figure \@ref(fig:figure1)) – suggest that reading multi-morphemic words in Kalaallisut places relatively high demands on the processing system. Given that such words are pervasive in the language, this raises the broader question of whether reading Kalaallisut is, all else being equal, more resource demanding than reading languages characterized by shorter words, such as English. This question remains open and requires targeted cross-linguistic investigation. Nevertheless, it is noteworthy that many native speakers of Kalaallisut prefer reading in Danish or English when given the choice, despite the widespread use of Kalaallisut text in schools and the media in Greenland. In the present study, 35 participants (67%) reported reading Kalaallisut every day, yet only 25 of these 35 identified Kalaallisut as one of their preferred languages for reading.
+
+One could speculate that because Kalaallisut orthography is relatively young and was developed on the basis of European writing traditions, it may not be optimally suited to the language’s morphological structure. This raises the possibility that readers of Kalaallisut may benefit from alternative orthographic solutions, introducing visual cues to facilitate the processing of complex words.
 
 One promising direction for future research is comparative work with closely related languages that employ different orthographic systems. Inuktitut, for example, uses a syllabic writing system rather than the Latin alphabet. Eye-tracking studies of Inuktitut reading could provide valuable insight into how multi-morphemic words are processed in a syllabic orthography, where fewer symbols are used to represent the same linguistic material. Such a system may reduce visual crowding and constrain the possible locations of morpheme boundaries, potentially facilitating segmentation. Comparative evidence of this kind would help clarify the extent to which the processing demands observed here reflect properties of Kalaallisut morphology per se or characteristics of its orthographic implementation.
 
@@ -1071,17 +1073,17 @@ This study set out to explore how multi-morphemic words are processed in Kalaall
 
 First, the results provide support for the theory-based claim that some Kalaallisut suffixes are lexical rather than grammatical, showing that this proposed distinction is reflected in attention allocation in reading. This challenges the widespread assumption that affixes are always grammatical elements.
 
-Second, the study shows that the word cannot always be assumed to be the basic unit of processing in reading. Our findings indicate that reading of multi-morphemic words in Kalaallisut is driven to a large extent by morpheme-level processing rather than holistic word recognition. This poses a challenge to influential models of eye-movement control that take the word as their fundamental unit, and it underscores the need for models to account for morpheme-level processing in order to accommodate languages where morphologically complex words are frequent.
+Second, the study shows that the word cannot always be assumed to be the basic unit of processing in reading. Our findings indicate that reading of multi-morphemic words in Kalaallisut is driven to a large extent by morpheme-level processing. This poses a challenge to influential models of eye-movement control that take the word as their fundamental unit, and it underscores the need for models to account for morpheme-level processing in order to accommodate languages where morphologically complex words are frequent.
 
 Third, although the results indicate that morphemes function as processing units in Kalaallisut, processing suffixes is not equivalent to processing individual simple words. Saccade targeting and skipping within complex words appears less efficient than between words. This may reflect that morpheme boundaries are not visually marked in the orthography, and it points to an interesting avenue for further research on the interaction between morphological structure and orthography in shaping reading behavior.
 
 Taken together, these findings demonstrate that the study of morphologically rich languages offers critical insights into the mechanisms of reading and language processing. They expose limitations of assumptions that are often taken for granted in psycholinguistic research and underscore the importance of broadening the empirical base of reading studies. Future comparative work, particularly across languages with different orthographic systems, will be essential for disentangling the roles of morphology and orthography and for understanding how readers adapt to extreme morphological complexity.
 
-# Acknowledgements {-}
+# Acknowledgements {.unnumbered}
 
 The present study was funded by the Independent Research Fund Denmark (grant number: 10.46540/2027-00079B). The authors would like to thank the Department of Communication and Psychology at Aalborg University for lending the portable eye tracker.
 
-# References {-}
+# References {.unnumbered}
 
 ::: {#refs}
 :::

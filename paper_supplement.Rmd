@@ -20,6 +20,90 @@ source("R/09_regression_rates.R")
 
 ```
 
+## Descriptive statistics for dependent measures
+Descriptive statistics (means and standard deviations) for the three dependent measures: skipping probability, first fixation duration, and gaze duration. These values represent raw means and standard deviations and are not adjusted for suffix frequency, length, predictability, or participant variability. These factors are accounted for in the mixed-effects models reported in the main text.
+
+```{r descriptivestats, echo=FALSE, warning=FALSE}
+
+# skipping probability
+skip_desc <- df_affix %>%
+  mutate(skipped = as.integer(FIRST_PASS_FIXATION_COUNT == 0)) %>%
+  group_by(affix_type) %>%
+  summarise(
+    skipping_M = mean(skipped),
+    skipping_SD = sd(skipped),
+    .groups = "drop"
+  )
+
+# FFD and GD (excluding skipped trials)
+duration_desc <- df_affix_without_skipped %>%
+  group_by(affix_type) %>%
+  summarise(
+    FFD_M = mean(FIRST_FIXATION_DURATION),
+    FFD_SD = sd(FIRST_FIXATION_DURATION),
+    GD_M = mean(GAZE_DURATION),
+    GD_SD = sd(GAZE_DURATION),
+    .groups = "drop"
+  )
+
+# combine tables
+desc_table <- skip_desc %>%
+  left_join(duration_desc, by = "affix_type") %>%
+  mutate(
+    `Skipping probability` = sprintf("%.2f (%.2f)", skipping_M, skipping_SD),
+    `First fixation duration (ms)` = sprintf("%.0f (%.0f)", FFD_M, FFD_SD),
+    `Gaze duration (ms)` = sprintf("%.0f (%.0f)", GD_M, GD_SD)
+  ) %>%
+  select(
+    affix_type,
+    `Skipping probability`,
+    `First fixation duration (ms)`,
+    `Gaze duration (ms)`
+  )
+
+# rename conditions
+desc_table$affix_type <- recode(
+  desc_table$affix_type,
+  lexical = "Lexical suffixes",
+  grammatical = "Grammatical suffixes"
+)
+
+# transpose so measures are rows
+desc_table <- desc_table %>%
+  tidyr::pivot_longer(
+    cols = -affix_type,
+    names_to = "measure",
+    values_to = "values"
+  ) %>%
+  tidyr::pivot_wider(
+    names_from = affix_type,
+    values_from = values
+  )
+
+# convert to huxtable
+desc_ht <- as_hux(desc_table)
+
+# formatting
+colnames(desc_ht) <- c(
+  "Measure",
+  "Lexical suffixes M (SD)",
+  "Grammatical suffixes M (SD)"
+)
+
+align(desc_ht)[, 2:3] <- "right"
+align(desc_ht)[, 1] <- "left"
+
+caption(desc_ht) <- 
+  "Descriptive statistics for eye-movement measures by suffix type"
+
+top_border(desc_ht)[1, ] <- 1
+bottom_border(desc_ht)[1, ] <- 1
+
+desc_ht
+
+```
+
+
 ## Relationship between fixation density and word length for fast vs. slow readers {-}
 For this plot, participants were divided into two equally sized groups based on reading speed.
 
