@@ -1,6 +1,10 @@
 ---
 title: ""
-output: bookdown::word_document2 
+output:
+  bookdown::word_document2:
+    number_sections: false
+    global_numbering: true
+    reference_docx: "reference.docx"
 bibliography: bibliography.bib
 csl: apa.csl
 ---
@@ -20,7 +24,7 @@ source("R/09_regression_rates.R")
 
 ```
 
-# Eye tracking in a polysynthetic language: Evidence for a distinction between lexical and grammatical suffixes {.unnumbered}
+# Eye Tracking in a Polysynthetic Language: Evidence for a Distinction between Lexical and Grammatical Suffixes 
 
 Solvej W. Jaeger^a^\*, Johanne S. K. Nedergaard^a^, Mads Nielsen^a^, Naja B. Trondhjem^b,c^, Malu A. Hendriksen^b^, Amalie H. Joergensen^a^, Kasper Boye^a^
 
@@ -59,13 +63,13 @@ Phone: +45 53 31 33 07
 
 \newpage
 
-# Abstract {.unnumbered}
+# Abstract 
 
 This eye-tracking study investigates the processing of multi-morphemic words during reading in Kalaallisut (Greenlandic), a so-called polysynthetic language characterized by extreme morphological richness. The study has two main aims. First, it tests the hypothesis that some Kalaallisut derivational suffixes are lexical rather than grammatical, and that this distinction is reflected in the allocation of visual attention during reading. Second, it provides an exploratory account of overall fixation patterns on multi-morphemic words in Kalaallisut reading. The hypothesis-driven analyses show that lexical suffixes elicited longer first fixation durations and gaze durations than grammatical suffixes, even when suffix frequency and length were controlled for, supporting the proposed lexical–grammatical distinction and challenging the widespread assumption that affixes form a uniformly grammatical category. In addition, suffix frequency and length significantly influenced reading measures in ways that parallel well-established word-level effects in other languages, suggesting that suffixes function as processing units in Kalaallisut reading. Turning to the exploratory analyses, long, multi-morphemic words elicited a high density of fixations compared to shorter words, indicating substantial processing demands. Within multi-morphemic words, visual attention was asymmetrically distributed, with fixations most highly concentrated near the root at the beginning of the word.
 
-# Keywords {.unnumbered}
+# Keywords 
 
-eye tracking; Kalaallisut; polysynthesis; affixes; grammar-lexicon distinction; attention
+eye tracking; polysynthesis; affixes; grammar-lexicon distinction; attention
 
 \newpage
 
@@ -117,25 +121,21 @@ In Kalaallisut, application of the modification criterion leads to the classific
 
 Based on the theory outlined here, we would expect that Kalaallisut suffixes classified as lexical attract more attention in language processing than suffixes classified as grammatical. The present eye-tracking experiment is designed to test this. If the results support the prediction, the implications would be far-reaching, calling for a rethinking of affixes as not exclusively grammatical in nature. Beyond these theoretical implications, the experiment also contributes to the understanding of how multi-morphemic words are processed during reading in a morphologically rich language, a topic that has so far received little attention. The study can thus provide empirical insights into whether models of reading and word processing developed primarily on Indo-European languages can be generalized to polysynthetic languages such as Kalaallisut.
 
-# The experiment
+# The Experiment
 
 In the experiment, adult native speakers of Kalaallisut read sentences on a screen while their eye movements were tracked. Each participant read 160 triplets of sentences, 80 of which contained a grammatical target suffix and 80 a lexical. As we describe in more detail below, the words in which the target suffixes appeared were constructed such that morphological structure and target suffix position were fixed. For the analysis, linear mixed-effects models were used to assess the effect of structural status (lexical vs. grammatical) on eye-movement measures for the suffixes. Suffix length, frequency and predictability were also included as predictors.
 
 Besides testing the specific hypotheses regarding grammatical and lexical suffixes, the experiment design also allowed for investigating more general fixation patterns on multi-morphemic words.
 
-## Data availability
-
-Data and analysis scripts are available here: <https://github.com/solvej-jaeger/eye_tracking_kalaallisut>.
-
 ## Methods
 
 ### Participants
 
-A total of 52 native speakers of Kalaallisut participated in the experiment (40 female, mean age = 27.1)[^2]. Of these, 45 were residents of Greenland and 7 of Denmark. None reported being dyslexic. Participants were informed that the experiment involved reading sentences on a screen while their eye movements were tracked. All participants completed a short questionnaire about their demographic and language background. They received a gift as acknowledgement of their participation.
+A total of 52 native speakers of Kalaallisut participated in the experiment (40 female, mean age = 27.1)[^2]. Of these, 45 were residents of Greenland and 7 of Denmark. None reported being dyslexic. All participants gave informed consent prior to participation. Participants were informed that the experiment involved reading sentences on a screen while their eye movements were tracked. All participants completed a short questionnaire about their demographic and language background. They received a gift as acknowledgement of their participation.
 
 [^2]: One of the participants only completed half of the experiment due to physical discomfort.
 
-### Apparatus and experimental procedure
+### Apparatus and Experimental Procedure
 
 Movements of the right eye were recorded with an Eyelink Portable Duo eye tracker (SR Research, Ontario, Canada), sampling at 1000 Hz[^3]. For the first 40 participants, sentences were displayed on a 24-inch monitor (brand: Philips, model ID: 240V55QDSB/00, resolution: 1920x1080) placed 90 cm from the subjects. For the remaining 12 participants, sentences were presented on a 27-inch monitor (brand: HP, model ID: HP E27m G4, resolution: 1920x1080) placed 104 cm from the subjects. In both cases, the screen width subtended 32 degrees of visual angle (the full trackable range of the eye tracker)[^4].
 
@@ -366,6 +366,10 @@ summary_table_baseline_ht
 
 ```
 
+## Transparency and Openness
+
+All data and analysis scripts are available here: <https://github.com/solvej-jaeger/eye_tracking_kalaallisut>. The study was not preregistered.
+
 # Results
 
 Fixations and saccades were segmented in DataViewer (SR Research) with EyeLink’s standard algorithm. DataViewer generated a fixation report, which was then further processed in Get Reading Measures (SR Research) to calculate standard reading measures for the specific regions of interest.
@@ -415,7 +419,7 @@ Overall, 6.97% of all trials were excluded in this data filtering process, leavi
 
 Statistical analyses were conducted using linear mixed-effects models implemented in the lme4 package [@batesFittingLinearMixedEffects2015] in R, version 4.4.2 [@rcoreteamLanguageEnvironmentStatistical2021].
 
-## Lexical and grammatical suffixes
+## Lexical and Grammatical Suffixes
 
 The experiment was designed to test the prediction that Kalaallisut suffixes classified as lexical attract more attention during reading than those classified as grammatical. This yields two specific predictions: 1) grammatical suffixes are skipped more than lexical suffixes, and 2) fixation durations are longer for lexical than for grammatical suffixes. We tested these hypotheses using three measures of the critical region [following @staubFunctionContentWord2024]: skipping probability (the probability that the target region is skipped on the first pass), first fixation duration (the duration of the first fixation on the target region - henceforth FFD) and gaze duration (the sum of all fixation durations on the target region before the region is exited to the right or left - henceforth GD). Together, these measures capture first-pass processing of the region. That is, fixations occurring after the region has been exited and subsequently re-entered are not included in these measures.
 
@@ -561,7 +565,7 @@ tbl_ht
 
 ```
 
-### First fixation duration
+### First Fixation Duration
 
 Trials in which the target suffix was skipped were excluded from the FFD and GD analyses [in line with practice in other studies – e.g., @staubFunctionContentWord2024].
 
@@ -705,7 +709,7 @@ tbl_ffd_ht
 
 ```
 
-### Gaze duration
+### Gaze Duration
 
 The analysis of GD was likewise done using a linear mixed-effects model with structural status, frequency, length, and predictability as fixed effects and with random intercepts for participants (Table \@ref(tab:table8)). The model revealed a significant effect of structural status, with longer GD for lexical than for grammatical suffixes, supporting the hypothesis. Suffix frequency had a negative effect on GD, with more frequent suffixes receiving shorter gaze durations. Suffix length had a positive effect, with longer gaze durations for longer suffixes. There was no significant effect of suffix predictability.
 
@@ -847,7 +851,7 @@ tbl_gd_ht
 
 ```
 
-## General characteristics of Kalaallisut reading
+## General Characteristics of Kalaallisut Reading
 
 As noted at the outset, the second of the study’s two aims was exploratory: to examine general fixation patterns and gain an overall picture of how multi-morphemic words are processed in Kalaallisut reading. Below, we summarize the main exploratory findings.
 
@@ -1013,19 +1017,19 @@ At the same time, however, the results also underscore that the processing of mo
 
 In the following sections, we discuss each of the findings in turn, considering their potential implications for our understanding of reading, language processing and morphological complexity.
 
-## Lexical vs. grammatical suffixes
+## Lexical vs. Grammatical Suffixes
 
 The central question addressed in the suffix-level analyses was whether suffixes classified as lexical differ from grammatical suffixes in the amount of attention they attract during reading. The results showed that when suffix frequency, length, and predictability were controlled for, lexical suffixes elicited longer fixation times than grammatical suffixes, as reflected in both first fixation durations (FFD) and gaze durations (GD). These effects are consistent with the prediction that lexical suffixes attract more attention than grammatical suffixes in reading.
 
-In contrast, no reliable effect of structural status was observed for skipping probability. We examined skipping alongside fixation duration measures because grammatical words have traditionally been associated with higher skipping rates than lexical words [e.g. @carpenterWhatYourEyes1983] – although it has recently been argued that this difference may largely reflect correlated factors such as frequency and length [@staubFunctionContentWord2024]. Within our theoretical framework, grammatical suffixes would likewise in principle be expected to be skipped more often than lexical suffixes. However, skipping constitutes a relatively indirect and noisy measure of attention allocation. The decision to skip a suffix depends both on the degree to which the suffix has been processed parafoveally and on whether that processing is deemed sufficient to forego direct fixation. Degree of parafoveal processing is influenced by multiple factors, including properties such as frequency and predictability of both the root and the suffix. In Kalaallisut, morpheme skipping rates may also be influenced by the difficulty of identifying morpheme boundaries parafoveally, as these boundaries are not visually marked (see further discussion in section \@ref(differences-between-reading-of-suffixes-and-words)). Against this background, the absence of a structural-status effect on skipping does not undermine the fixation-time findings. Notably, a similar dissociation between fixation-duration measures and skipping probability was observed by @jaegerTimeChangeWhyunderbedommelse-submitted in a reanalysis of data from @staubFunctionContentWord2024.
+In contrast, no reliable effect of structural status was observed for skipping probability. We examined skipping alongside fixation duration measures because grammatical words have traditionally been associated with higher skipping rates than lexical words [e.g. @carpenterWhatYourEyes1983] – although it has recently been argued that this difference may largely reflect correlated factors such as frequency and length [@staubFunctionContentWord2024]. Within our theoretical framework, grammatical suffixes would likewise in principle be expected to be skipped more often than lexical suffixes. However, skipping constitutes a relatively indirect and noisy measure of attention allocation. The decision to skip a suffix depends both on the degree to which the suffix has been processed parafoveally and on whether that processing is deemed sufficient to forego direct fixation. Degree of parafoveal processing is influenced by multiple factors, including properties such as frequency and predictability of both the root and the suffix. In Kalaallisut, morpheme skipping rates may also be influenced by the difficulty of identifying morpheme boundaries parafoveally, as these boundaries are not visually marked (see further discussion in the section Differences between reading of suffixes and words). Against this background, the absence of a structural-status effect on skipping does not undermine the fixation-time findings. Notably, a similar dissociation between fixation-duration measures and skipping probability was observed by @jaegerTimeChangeWhyunderbedommelse-submitted in a reanalysis of data from @staubFunctionContentWord2024.
 
 The results indicate that Kalaallisut suffixes classified as lexical are processed with greater attentional investment than those classified as grammatical. The fixation-time measures provide consistent support for this distinction, whereas the skipping data do not contradict it given their lower sensitivity. The findings thus lend empirical support to the proposed structural classification of suffixes in Kalaallisut and suggest that this distinction is reflected in real-time language processing.
 
 These results have broad theoretical implications, as they challenge a widespread assumption in both functional and generative linguistics that affixes are inherently grammatical elements [e.g. @martinetElementsLinguistiqueGenerale1960: \S 4.19; @bybeeEvolutionGrammarTense1994; @segalowitzLexicalAccessFunction2000]. If some affixes in some languages are in fact lexical, this calls for a more differentiated approach to affixation, in which affixes are not automatically attributed grammatical status. Such a reconceptualization may in turn affect our understanding of the distinction between words and phrases, since this distinction is often grounded in assumptions about the types of elements words and phrases can contain. As discussed by @nielsenLexicalAffixesunderbedommelse-submitted, several of the traditional criteria used to distinguish words from phrases lose their force once a theoretically grounded notion of lexical affixes is adopted, suggesting that at least some of the classic contrasts between morphology and syntax may need to be reconsidered. Finally, the confirmation of the hypotheses provides further support for the theoretical framework adopted here [@boyeUsageBasedTheoryGrammatical2012; @boyeLexicalVsGrammatical2023; @boyeEvidentialityDiscourseProminence2024], as, to our knowledge, no other existing framework predicts these specific patterns.
 
-## Morphemes as processing units
+## Morphemes as Processing Units
 
-Beyond the effects of structural status, the suffix-level analyses revealed robust effects of frequency and length: More frequent suffixes were skipped more often and received shorter fixation times, whereas longer suffixes were skipped less frequently and attracted longer gaze durations. As mentioned in section \@ref(discussion), these patterns closely mirror well-established word-level effects reported for other languages [@raynerEyeMovementsWord2011; @kupermanWordLengthFrequency2024]. Although length showed a reverse effect for FFD – longer suffixes elicited shorter initial fixations – this pattern is not unprecedented and has been reported previously for Finnish compound words [@bertramLengthComplexWord2003]. It is likely that the pattern is a reflection of increased refixation probability as a function of length (the finding that gaze durations increased as a function of suffix length is consistent with this interpretation). No independent effects of suffix predictability were observed, likely due to its correlation with frequency or limitations of the corpus-based predictability measures.
+Beyond the effects of structural status, the suffix-level analyses revealed robust effects of frequency and length: More frequent suffixes were skipped more often and received shorter fixation times, whereas longer suffixes were skipped less frequently and attracted longer gaze durations. As mentioned above, these patterns closely mirror well-established word-level effects reported for other languages [@raynerEyeMovementsWord2011; @kupermanWordLengthFrequency2024]. Although length showed a reverse effect for FFD – longer suffixes elicited shorter initial fixations – this pattern is not unprecedented and has been reported previously for Finnish compound words [@bertramLengthComplexWord2003]. It is likely that the pattern is a reflection of increased refixation probability as a function of length (the finding that gaze durations increased as a function of suffix length is consistent with this interpretation). No independent effects of suffix predictability were observed, likely due to its correlation with frequency or limitations of the corpus-based predictability measures.
 
 Taken together, these findings demonstrate systematic attentional differences at the morpheme level that parallel classic word-level effects in eye-movement research. This suggests that multi-morphemic Kalaallisut words are morphologically decomposed during reading and that individual morphemes function as processing units (especially the effects of frequency and structural status support this interpretation, as the effects of morpheme length could also be due to syllabic rather than morphemic segmentation).
 
@@ -1033,7 +1037,7 @@ These results have important implications for models of reading and for eye-trac
 
 Methodologically, the present study demonstrates the value of analyzing eye movements within words. By treating individual suffixes as independent analysis regions, it provides a level of granularity that word-level designs cannot achieve. This approach is particularly well suited to morphologically rich languages like Kalaallisut and opens up new avenues for investigating morphological processing in real time.
 
-## Word length and fixation density
+## Word Length and Fixation Density
 
 As illustrated in Figure \@ref(fig:figure1), fixation density exhibits a U-shaped relationship with word length, with a minimum at approximately nine letters, a pattern that is observed for both fast and slow readers (see Supplementary Materials). Beyond nine letters, fixation density increases with increasing word length, suggesting that reading long words in Kalaallisut imposes a high processing load on the reader. This may reflect morphological processes, as word length in Kalaallisut often correlates with morphological complexity. In line with this, suffixes within the multi-morphemic target words were skipped less and regressed to more frequently than the morphologically simple baseline words of similar length.
 
@@ -1041,7 +1045,7 @@ The turning point at around nine letters is noteworthy because it aligns closely
 
 Word length effects in eye-movement research are often modeled as linear [see e.g. @kupermanWordLengthFrequency2024]. While such linear approximations may be sufficient for many languages and experimental contexts, they risk obscuring meaningful patterns in languages characterized by very long words. In the present data, the observed non-linear relationship between word length and fixation density sheds light on the role of morphological decomposition as an important factor in Kalaallisut reading. Capturing such non-linearities is crucial for developing models of reading that generalize to morphologically rich languages.
 
-## Asymmetric attention distribution
+## Asymmetric Attention Distribution
 
 The within-word attention distribution observed for the target words (Figure \@ref(fig:figure2)) exhibits a clear asymmetry, with morphemes later in the word receiving less attention than those earlier in the word. Several, partly interacting factors may account for this pattern. One possible contributor is frequency: Many suffixes are considerably more frequent than roots, potentially facilitating faster processing (although a mixed-effects model of fixation density across word regions that includes frequency as a predictor indicates that frequency alone does not account for the observed pattern; see Supplementary Materials). Another possible contributing factor is word-final position: The inflection's position next to a space may make it easier to identify parafoveally than the suffixes embedded in the middle of the word, increasing the likelihood of skipping.
 
@@ -1051,7 +1055,7 @@ The interpretation is further complicated by the fact that this lexical-grammati
 
 Future work could help disentangle these interacting factors by examining eye movements in left-branching languages with predominantly prefixing morphology, such as Athabaskan languages (e.g. Navajo), where the lexical root typically occurs at the end of the word. Such comparisons would allow for a clearer separation of positional and parafoveal effects from those related to structural status and frequency.
 
-## Differences between reading of suffixes and words
+## Differences between Reading of Suffixes and Words
 
 Although individual suffixes in Kalaallisut may correspond to separate words in more analytic languages, and although our results indicate that suffixes function as processing units in Kalaallisut reading, the observed within-word attention profile (Figure \@ref(fig:figure2)) clearly shows that reading a four-morpheme Kalaallisut word is not simply equivalent to reading three or four independent words. Instead, morphemes are processed within a structured and highly asymmetric attentional landscape shaped by morphological organization and visual position. Comparing the profiles of attention distribution within words (Figures \@ref(fig:figure2) and \@ref(fig:figure3)) further highlights this distinction: While fixation patterns for the morphologically simple baseline words show a characteristic peak in the second quartile of the word, suffixes do not exhibit a comparable pattern. Thus, reading suffixes cannot be equated with reading independent words.
 
@@ -1079,11 +1083,11 @@ Third, although the results indicate that morphemes function as processing units
 
 Taken together, these findings demonstrate that the study of morphologically rich languages offers critical insights into the mechanisms of reading and language processing. They expose limitations of assumptions that are often taken for granted in psycholinguistic research and underscore the importance of broadening the empirical base of reading studies. Future comparative work, particularly across languages with different orthographic systems, will be essential for disentangling the roles of morphology and orthography and for understanding how readers adapt to extreme morphological complexity.
 
-# Acknowledgements {.unnumbered}
+# Acknowledgements
 
 The present study was funded by the Independent Research Fund Denmark (grant number: 10.46540/2027-00079B). The authors would like to thank the Department of Communication and Psychology at Aalborg University for lending the portable eye tracker.
 
-# References {.unnumbered}
+# References
 
 ::: {#refs}
 :::

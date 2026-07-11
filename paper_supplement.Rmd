@@ -20,7 +20,7 @@ source("R/09_regression_rates.R")
 
 ```
 
-## Descriptive statistics for dependent measures
+## Descriptive statistics for dependent measures in the lexical vs. grammatical condition {-}
 Descriptive statistics (means and standard deviations) for the three dependent measures: skipping probability, first fixation duration, and gaze duration. These values represent raw means and standard deviations and are not adjusted for suffix frequency, length, predictability, or participant variability. These factors are accounted for in the mixed-effects models reported in the main text.
 
 ```{r descriptivestats, echo=FALSE, warning=FALSE}
