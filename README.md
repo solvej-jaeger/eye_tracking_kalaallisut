@@ -8,6 +8,7 @@ This repository contains code and data from the Kalaallisut eye-tracking reading
 - `data/` — The cleaned Kalaallisut eye-tracking reading data (licensed separately, see below).
 - `raw_data/` — The raw data (licensed separately, see below)
 - `items/` — The experimental items.
+- `research materials/` — The experiment (constructed in Experiment Builder, SR Research) and the participant questionnaire
 
 ## License
 
