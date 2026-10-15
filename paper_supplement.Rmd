@@ -103,6 +103,135 @@ desc_ht
 
 ```
 
+## Checking for spillover effects {-}
+Here the log-transformed frequencies of the root and the fill suffix are included in the main models to test for spillover frequency effects.
+
+### Skipping model {-}
+
+```{r spillover effects skipping, echo=FALSE, warning=FALSE, message=FALSE}
+## skipping model
+
+df_skip_model <- df_affix %>%
+  mutate(
+    skipped = as.integer(FIRST_PASS_FIXATION_COUNT == 0)    # 1 = skipped, 0 = fixated
+  )
+
+model_skipping_spillover <- glmer(
+  skipped ~ affix_type + affix_frequency_log + affix_length + predictability_log + fill_affix_frequency_log + root_frequency_log +
+    (1 | participant_id), # random intercepts for participants
+  data = df_skip_model,
+  family = "binomial"
+)
+
+# make a table
+
+model_skipping_spillover_tbl <- tbl_regression(
+  model_skipping_spillover,
+  exponentiate = FALSE,
+  tidy_fun = function(x, ...) {
+    broom.mixed::tidy(x, effects = "fixed", conf.int = FALSE)
+  }
+)
+
+model_skipping_spillover_tbl <- model_skipping_spillover_tbl %>%
+  modify_header(
+    estimate ~ "β", 
+    std.error ~ "SE",
+    statistic ~ "t",
+    p.value ~ "p"
+  )
+
+# create huxtable
+model_skipping_spillover_ht <- model_skipping_spillover_tbl %>%
+  as_tibble() %>%
+  as_hux()
+
+model_skipping_spillover_ht
+
+```
+
+### First fixation duration model {-}
+
+```{r spillover effects ffd, echo=FALSE, warning=FALSE, message=FALSE}
+
+## ffd model
+
+# trials where target affix is skipped are excluded from the ffd and gd analyses
+df_affix_without_skipped <- df_affix %>%
+  filter(FIRST_PASS_FIXATION_COUNT != 0) %>%
+  mutate(FIRST_FIXATION_DURATION_log = log(FIRST_FIXATION_DURATION),
+         GAZE_DURATION_log = log(GAZE_DURATION))
+
+model_ffd_spillover <- lmer(
+  FIRST_FIXATION_DURATION_log ~ affix_type + affix_frequency_log + affix_length + predictability_log + fill_affix_frequency_log + root_frequency_log +
+    (1 | participant_id),
+  data = df_affix_without_skipped
+)
+
+# make a table
+
+model_ffd_spillover_tbl <- tbl_regression(
+  model_ffd_spillover,
+  exponentiate = FALSE,
+  tidy_fun = function(x, ...) {
+    broom.mixed::tidy(x, effects = "fixed", conf.int = FALSE)
+  }
+)
+
+model_ffd_spillover_tbl <- model_ffd_spillover_tbl %>%
+  modify_header(
+    estimate ~ "β", 
+    std.error ~ "SE",
+    statistic ~ "t",
+    p.value ~ "p"
+  )
+
+# create huxtable
+model_ffd_spillover_ht <- model_ffd_spillover_tbl %>%
+  as_tibble() %>%
+  as_hux()
+
+model_ffd_spillover_ht
+```
+
+### Gaze duration model {-}
+
+```{r spillover effects gd, echo=FALSE, warning=FALSE, message=FALSE}
+
+## gd model
+
+model_gd_spillover <- lmer(
+  GAZE_DURATION_log ~ affix_type + affix_frequency_log + affix_length + predictability_log + fill_affix_frequency_log + root_frequency_log +
+    (1 | participant_id), # random intercept
+  data = df_affix_without_skipped
+)
+
+# make a table
+
+model_gd_spillover_tbl <- tbl_regression(
+  model_gd_spillover,
+  exponentiate = FALSE,
+  tidy_fun = function(x, ...) {
+    broom.mixed::tidy(x, effects = "fixed", conf.int = FALSE)
+  }
+)
+
+model_gd_spillover_tbl <- model_gd_spillover_tbl %>%
+  modify_header(
+    estimate ~ "β", 
+    std.error ~ "SE",
+    statistic ~ "t",
+    p.value ~ "p"
+  )
+
+# create huxtable
+model_gd_spillover_ht <- model_gd_spillover_tbl %>%
+  as_tibble() %>%
+  as_hux()
+
+model_gd_spillover_ht
+```
+
 
 ## Relationship between fixation density and word length for fast vs. slow readers {-}
 For this plot, participants were divided into two equally sized groups based on reading speed.
@@ -315,7 +444,7 @@ model_fix_dens_tbl <- model_fix_dens_tbl %>%
   modify_header(
     estimate ~ "β", 
     std.error ~ "SE",
-    statistic ~ "z",
+    statistic ~ "t",
     p.value ~ "p"
   )
 
